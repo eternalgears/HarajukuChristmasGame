@@ -95,7 +95,7 @@ label splashscreen:
 
     scene white with slow_dissolve
 
-    show text "{color=#CC5E5E}Made for the Winter Visual Novel Jam 2025.{/color}"
+    show text "{size=40}{color=#CC5E5E}Made for the Winter Visual Novel Jam 2025.{/size}{/color}"
     with slow_dissolve
     $ renpy.pause()
     hide text with dissolve
