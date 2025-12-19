@@ -87,7 +87,21 @@ style kuma_text:
 style santa_text:
     outlines [(4, "#b52a2a", 0, 0)]
 
+label splashscreen:
+    play sound "audio/splash.wav"
+    scene bg splash
+    with Pause(1)
+    $ renpy.pause()
 
+    scene white with slow_dissolve
+
+    show text "{color=#CC5E5E}Made for the Winter Visual Novel Jam 2025.{/color}"
+    with slow_dissolve
+    $ renpy.pause()
+    hide text with dissolve
+    with Pause(1)
+
+    return
 
 ########### GAME START ########
 label start:
@@ -147,8 +161,7 @@ label start:
     #replace the line below with harajuku music later
     stop music fadeout 1.0
     scene bg harajuku city with slow_dissolve
-    show reina neutral
-
+    
     "The streets of Harajuku are filled with people in every corner. There’s some festive jazzy music among the constant chatter."
     r "Kuma said to meet at this corner.."
     k "Reinaaa?"
