@@ -1,7 +1,6 @@
 ﻿# The script of the game goes in this file.
 
 # voice bleeps
-
 init python:
     def reina_sound(event, interact=True, **kwargs):
         if not interact:
@@ -21,15 +20,30 @@ init python:
         elif event == "slow_done" or event == "end":
             renpy.sound.stop()
 
+    def santa_sound(event, interact=True, **kwargs):
+        if not interact:
+            return
+
+        if event == "show":
+            renpy.sound.play("audio/santa.wav", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.sound.stop()
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
 define r = Character("Reina", image = "reina", cb_name="reina", color="#ffffff", style="reina_text", callback = CallbackList(reina_sound, name_callback))
 define k = Character("Kuma", image = "kuma", cb_name="kuma", color="#ffffff", style="kuma_text", callback = CallbackList(kuma_sound, name_callback))
 
+# npc characters
+
+define v = Character("Santa", image = "santa", cb_name = "santa", color="#ffffff", style="santa_text", callback = CallbackList(santa_sound, name_callback))
+define c = Character("Clerk", color="#ffffff", style="santa_text", callback = name_callback)
+
+
 # nvl characters
 define r_nvl = Character("Reina", kind = nvl, image = "reina", callback = Phone_SendSound)
-define k_nvl = Character("kuma :33", kind = nvl, callback = Phone_ReceiveSound)
+define k_nvl = Character("kuma~ :33", kind = nvl, callback = Phone_ReceiveSound)
 
 layeredimage reina1:
     #at sprite_highlight('reina')
@@ -51,9 +65,13 @@ image reina = LayeredImageProxy("reina1", transform=sprite_highlight("r"))
 image kuma = LayeredImageProxy("kuma1", transform=sprite_highlight("k"))
 
 # defaults 
-
 default preferences.text_cps = 40
+define slow_dissolve = Dissolve(1.0)
 define config.nvl_list_length = None
+
+# images
+image white = "#fff"
+image pink = "#ffd9d9"
 
 # outline text
 style reina_text:
@@ -61,41 +79,88 @@ style reina_text:
 
 style kuma_text:
     outlines [(4, "#fca67e", 0, 0)]
-# The game starts here.
 
+style santa_text:
+    outlines [(4, "#b52a2a", 0, 0)]
+
+
+
+########### GAME START ########
 label start:
 
-    scene bg room
+    scene pink with dissolve
 
-    play music "audio/apt-ost.mp3"
-    show reina neutral:
-        ease 0.5 xalign 0.9
+    r "Hmm hmmm~"
+    r "Just gotta get it over here.."
 
-    show kuma neutral:
-        ease 0.5 xalign 0.1
+    scene bg apartment with dissolve
 
-    r "CODING MECHANICS"
+    "I flick the mascara up a little more, making sure it curls up just the way I want it to."
+    "Today’s the big day! {w}I’m gonna spend a nice Christmas date with my girlfriend."
+    r "Hehe… Kuma is gonna love this one…"
 
-    r "voice bleeps, texting mechanic, point and click, auto highlight?"
-    
-    r "hihihihihiih"
+    # phone notification sound effect here
 
-    k "hiiiiii"
+    r "AAHHHH!!!!!!!!"
+    r "KUMAAAA!!!!!!!"
 
-    r "ajsdfhkjahjskdfhkja"
+    # texting portion (put proper texting conventions for coders)
 
-    show reina happy:
-        ease 0.5 xalign 0.7 
-    
-    nvl_narrator "text tex ttext kuma"
-    k_nvl "hi"
-    r_nvl "hi"
-    r_nvl neutral "hiiiii"
-    k_nvl "hiiiii"
+    k_nvl "haiiii ^_^"
+    nvl_narrator "kuma~ :33 poked you."
+    k_nvl "hiiii reinaaa"
+    k_nvl "u preparing for the date?"
+    r_nvl "Ya :3"
+    r_nvl "You also ready?"
+    r_nvl "I can’t wait to see you :33"
+    k_nvl "ummm"
+    k_nvl "im already here"
+    k_nvl "(^_^;)"
+    r_nvl "WHAT"
+    r_nvl "I’m almost done!"
+    r_nvl "I’ll be there"
+    r_nvl ":)) !!!"
+    k_nvl "cyaaa"
+    k_nvl ">_<"
 
-    show reina happy:
-        ease 0.5 xalign 0.5 
+    # texting portion ends
 
-    # This ends the game.
+    r "Whew…"
+    r "She’s 30 minutes early to a date?? That’s not like her!"
+    r "I’ve got to get my game on!"
+    "I swiftly add the finishing touches to my makeup and put on my cute bow heels."
+    r "..."
+    r "I’ve got to add a photo for Kinsta!"
+
+    # photo snapping sound effects
+    "(snaps some photos)"
+    r "Let’s go!"
+
+    scene bg harajuku city with slow_dissolve
+
+    "The streets of Harajuku are filled with people in every corner. There’s some festive jazzy music among the constant chatter."
+    r "Kuma said to meet at this corner.."
+    k "Reinaaa?"
+    r "Ah!"
+    # sound effect of hugging and cg should be here
+    r "KUUUMMAAA!!!"
+    k "Ghk…!"
+    "I hugged her tight. It feels like I’m holding a cloud since we’re both wearing fluffy jackets."
+    k "You’re squeezing me!"
+    r "Huhu~"
+    r "Oooo… I didn’t think that gyarus could have winter wear too. The leopard print coat looks soo cute on you!"
+    r "Cute and gyaru as ever!"
+    k "Wahhh… thank ya, thank ya."
+    k "Your coord is so cute too~"
+    k "Hopefully it ain’t too much trouble to get a Christmas print JSK?"
+    r "I stayed up at 12 am bidding with this other lolita online to get it…"
+    r "Since it’s in season and all!"
+    k "Yikes…"
+    k "It looks like ya would’ve been cuter in it anyway."
+    r "You’re such a flirt…"
+    r "OKAY!!!"
+    r "LETS GO!!!"
+    k "Yeah!"
+
 
     return
