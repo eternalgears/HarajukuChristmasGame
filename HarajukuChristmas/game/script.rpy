@@ -89,28 +89,30 @@ style santa_text:
 label start:
 
     scene pink with dissolve
-
+    play music "audio/apt-ost.mp3" fadein 2.5
     r "Hmm hmmm~"
     r "Just gotta get it over here.."
 
-    scene bg apartment with dissolve
-
+    scene bg apartment with slow_dissolve
+    show reina neutral with dissolve
     "I flick the mascara up a little more, making sure it curls up just the way I want it to."
     "Today’s the big day! {w}I’m gonna spend a nice Christmas date with my girlfriend."
     r "Hehe… Kuma is gonna love this one…"
 
     # phone notification sound effect here
 
-    r "AAHHHH!!!!!!!!"
+    r happy "AAHHHH!!!!!!!!"
     r "KUMAAAA!!!!!!!"
 
+    show reina happy:
+        ease 0.5 xalign 0.7 
     # texting portion (put proper texting conventions for coders)
 
     k_nvl "haiiii ^_^"
     nvl_narrator "kuma~ :33 poked you."
     k_nvl "hiiii reinaaa"
     k_nvl "u preparing for the date?"
-    r_nvl "Ya :3"
+    r_nvl neutral "Ya :3"
     r_nvl "You also ready?"
     r_nvl "I can’t wait to see you :33"
     k_nvl "ummm"
@@ -136,6 +138,8 @@ label start:
     "(snaps some photos)"
     r "Let’s go!"
 
+    #replace the line below with harajuku music later
+    stop music fadeout 1.0
     scene bg harajuku city with slow_dissolve
 
     "The streets of Harajuku are filled with people in every corner. There’s some festive jazzy music among the constant chatter."
