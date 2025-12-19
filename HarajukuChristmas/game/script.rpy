@@ -69,6 +69,10 @@ default preferences.text_cps = 40
 define slow_dissolve = Dissolve(1.0)
 define config.nvl_list_length = None
 
+# transforms 
+transform easeright:
+    ease 0.5 xalign 0.7
+
 # images
 image white = "#fff"
 image pink = "#ffd9d9"
@@ -104,8 +108,8 @@ label start:
     r happy "AAHHHH!!!!!!!!"
     r "KUMAAAA!!!!!!!"
 
-    show reina happy:
-        ease 0.5 xalign 0.7 
+    show reina neutral:
+        ease 0.5 xpos 0.7
     # texting portion (put proper texting conventions for coders)
 
     k_nvl "haiiii ^_^"
@@ -120,12 +124,14 @@ label start:
     k_nvl "(^_^;)"
     r_nvl "WHAT"
     r_nvl "I’m almost done!"
-    r_nvl "I’ll be there"
+    r_nvl happy "I’ll be there"
     r_nvl ":)) !!!"
     k_nvl "cyaaa"
     k_nvl ">_<"
 
     # texting portion ends
+    show reina neutral:
+        ease 0.5 xalign 0.5
 
     r "Whew…"
     r "She’s 30 minutes early to a date?? That’s not like her!"
@@ -141,6 +147,7 @@ label start:
     #replace the line below with harajuku music later
     stop music fadeout 1.0
     scene bg harajuku city with slow_dissolve
+    show reina neutral
 
     "The streets of Harajuku are filled with people in every corner. There’s some festive jazzy music among the constant chatter."
     r "Kuma said to meet at this corner.."
@@ -167,4 +174,4 @@ label start:
     k "Yeah!"
 
 
-    return
+    jump harajukuoptions
