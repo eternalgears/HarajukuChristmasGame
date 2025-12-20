@@ -1,25 +1,57 @@
 ﻿label gyaru_boutique:
+
+    scene bg gyaru_boutique with slow_dissolve
     # insert store door ringing sound
+    show reina happy
 
     r "WOAHHHH!!"
     "Rows holding fluffy accessories and racks with gyaru-like clothing fill the store atmosphere."
+    show reina happy:
+        ease 0.5 xpos 0.7
+    
+    show kuma happy:
+        ease 0.5 xpos 0.1
+    
     k "I knew you'd like the store."
     r "There is so much in here!"
     k "Oooo~ I've been meaning to show you it. Come on, let's go look over here."
-
+    show reina neutral:
+        xpos 0.7
+    
+    show kuma neutral:
+        xpos 0.1
+    
     "We hustle over to a rack containing shoulderless shirts. I can already picture how cute Kuma would look in them."
 
+    show reina happy:
+        xpos 0.7
     r "Wow this shirt looks really pretty! And it's {i}sooo soft.{/i}"
     r "What do you think, Kuma?"
+
+    show kuma talking:
+        xpos 0.1
     k "Hm? Let me see."
     # give clothing sound
+
+    show kuma happy:
+        xpos 0.1
     k "Wow it really is. I like the texture on it."
     r "That's good! This seems like something that you would wear."
+    show kuma talking:
+        xpos 0.1
     k "Are ya sure? I wasn't totally set on this one because I already have plenty of shoulderless shirts."
     r "Absolutely! A new shirt changes the base outfit right? So then, you would have a new outfit to accessorize!"
     k "Hmm... you do have a point."
+    show kuma happy:
+        xpos 0.1
     k "I think I will buy it. I can pair this one with one of my mini skirts."
     r "Yaa~y!"
+
+    show reina neutral:
+        xpos 0.7
+    
+    show kuma neutral:
+        xpos 0.1
 
     "We continue looking through the store, scouting for accessories, skirts, etc."
 
@@ -45,65 +77,119 @@
 
     #flashback transition to high school
 
+    scene white with slow_dissolve
+    scene bg apartment with dissolve
+
     "After a long tiring day of school, I've finally made it home..."
+    show reina neutral with dissolve
     r "Eugh..."
+    show reina surprised
     r "Crap, I forgot I still have to finish that essay!"
     r "Uuu... I have to start now!"
+
+    show reina neutral
 
     "After a while of tedious work, I suddenly hear a notification sound from my phone."
 
     r "Hm?"
+
+    show reina surprised
     r "HUH???"
 
     r "I got a DM from Kuma??"
     r "The popular gyaru influencer on Kinsta?? THE Kuma??"
+    show reina happy
     r "I can’t believe this is happening!!"
     "I close the doc tab (that has my essay due at 11:59PM.)"
     "Work can wait!"
 
 
     # in text
-    k "hey! this is kuma reaching out! i have been looking for someone who wears lolita fashion to be in my upcoming magazine issue."
-    k "and since we are moots and all..."
-    k "you seem like just the person for it! let me know if you want to collab! no pressure tho ^_^"
+    show reina neutral:
+        ease 0.5 xpos 0.7
+    
+    nvl clear
+
+    k_nvl "hey! this is kuma reaching out! i have been looking for someone who wears lolita fashion to be in my upcoming magazine issue."
+    k_nvl "and since we are moots and all..."
+    k_nvl "you seem like just the person for it! let me know if you want to collab! no pressure tho ^_^"
 
     # exit text
+    show reina neutral:
+        ease 0.5 xpos 0.5
+
+
+    show reina happy
+
     r "AAAAAAAAAAHHH!!!!!"
     r "AAAAAAAAAAAAAAAAAHHHHHHHHH!!!!!!!!!!!"
-    r "I can’t believe this is happening??"
-    r "Me? Me out of all people?! I can’t believe this??"
+    r "I can't believe this is happening??"
+    r "Me? Me out of all people?! I can't believe this??"
     r "I HAVE TO ACCEPT!!!"
+
+    # change scene for photoshoot
+
+    show reina neutral:
+        ease 0.5 xpos 0.7
+    
+    show kuma neutral:
+        ease 0.5 xpos 0.1
 
     "A few days later, we were able to meet up for the photo shoot and take photos together."
 
+    show kuma talking:
+        xpos 0.1
     k "Thank ya so so much for doing this with me! This is just what I needed for the magazine issue."
+
+    show reina happy:
+        xpos 0.7
+
     r "No no, thank you for featuring me!"
 
     "Kuma and I said our goodbyes and parted ways. She told me that she was gonna finish the magazine issue and publish it in the upcoming weekend."
 
     # transition? here
+    scene pink with slow_dissolve
+    scene bg apartment with slow_dissolve
+
+    show reina neutral
 
     "A few weeks had passed by since I did the photoshoot with Kuma."
     "I’ve been in contact with her since the photoshoot and we finally became friends irl!"
     # ding sound effect
     "Buzz buzz..."
+
+    show reina neutral2
+
     r "Oh! It looks like I got a text from her!"
 
     # in text
-    k "hey reina"
-    r "What’s up?"
-    k "have u heard any rumors going around lately?"
-    r "Not that I know of, why?"
-    k "well um one of my magazine rivals started a rumor we are dating… (^_^;)"
-    r "WHAT???"
-    k "yeah..."
-    k "im sorry you got dragged into this mess."
-    r "No no! It's nothing you should put the blame on yourself for."
-    r "The rumors will go away eventually so let's not worry too much! :3"
-    k "yeah! ur right! ^_^"
-    k "btw, would u wanna hang out sometime tomorrow?"
-    r "Sure!!!"
-    k "kk. cya then!"
+    show reina neutral:
+        ease 0.5 xpos 0.7
+
+    nvl clear
+
+    k_nvl "hey reina"
+    r_nvl "What's up?"
+    k_nvl "have u heard any rumors going around lately?"
+    r_nvl "Not that I know of, why?"
+    k_nvl "well um one of my magazine rivals started a rumor we are dating… (^_^;)"
+    show reina surprised:
+        xpos 0.7
+    r_nvl "WHAT???"
+    k_nvl "yeah..."
+    k_nvl "im sorry you got dragged into this mess."
+    show reina neutral2:
+        xpos 0.7
+    r_nvl "No no! It's nothing you should put the blame on yourself for."
+    r_nvl "The rumors will go away eventually so let's not worry too much! :3"
+    k_nvl "yeah! ur right! ^_^"
+    k_nvl "btw, would u wanna hang out sometime tomorrow?"
+    r_nvl "Sure!!!"
+    k_nvl "kk. cya then!"
+
+    show reina neutral:
+        ease 0.5 xpos 0.5
 
     "Tomorrow after school, Kuma is scheduled to come over to my apartment."
     "Even though we are friends, I'm really scared."
@@ -111,43 +197,77 @@
     "I don't want those rumors to mess up the bond that we have."
 
     # in person at the apartment transition
+    scene bg apartment with dissolve
+    
+    show reina happy with dissolve
     r "K-Kuma!"
+
+    show reina happy:
+        xpos 0.7
+    show kuma happy:
+        xpos 0.1
+
     k "Reina!"
 
+    show reina neutral2:
+        xpos 0.7
     "Of course, I scrubbed my room clean like a maniac before she came here."
 
+    show kuma talking:
+        xpos 0.1
     k "Woww. Your room is real organized."
+    show reina happy:
+        xpos 0.1
     r "Really?? Thank you so much."
+    show kuma happy:
+        xpos 0.1
     k "Haha! There's no need to thank me."
 
-    "Time flew by as we chatted about many things, like our love for fashion and the fashion magazines we’ve been keeping up with."
+    "Time flew by as we chatted about many things, like our love for fashion and the fashion magazines we've been keeping up with."
     "It got to a point where we also talked about our past, going into how we got into our fashion sub-styles."
 
+    show kuma talking:
+        xpos 0.1
     k "I think I gotta head out soon..."
-    r "Oh that’s okay! I should probably get to doing my homework."
+    show reina neutral2:
+        xpos 0.7
+    r "Oh that's okay! I should probably get to doing my homework."
     k "Well see ya soon."
+    show reina happy:
+        xpos 0.1
     r "Byeeeee!"
 
     # transition AGAIN
+    scene bg pink with slow_dissolve
     "A few months later..."
-
+    scene bg apartment with slow_dissolve
+    
+    show reina neutral with dissolve
     "I rushed back home to finish my homework so that I could call Kuma."
     "I was locked in on a physics question when I heard a buzz from my phone."
 
     #in Text
 
-    k "hey. can we talk rn?"
+    show reina neutral:
+        ease 0.5 xpos 0.7
+
+    k_nvl "hey. can we talk rn?"
 
     # in person 
+    show reina neutral:
+        ease 0.5 xpos 0.5
 
-    "There were so many things running through my head for what she could’ve meant."
+    "There were so many things running through my head for what she could've meant."
     "She seems serious."
 
     #in Text
+    show reina neutral:
+        ease 0.5 xpos 0.7
 
-    r "Yeah sure!"
+    r_nvl "Yeah sure!"
 
     #on call 
+    show reina neutral2
 
     r "What's up? Did something happen?"
     k "Umm..."
@@ -157,7 +277,9 @@
     k "I really love your presence! Just everything!"
     k "Would you like to go out on a date sometime...?"
 
+    show reina surprised
     r "Is this real life?? Oh my gosh..."
+    show reina happy
     r "Kuma, I think you're amazing as well!! I would gladly go on a date with you!"
 
     # in person
@@ -168,17 +290,30 @@
     # note: make the screaming dialogue text smaller to show that her voice is muffled (possibly by a pillow)
     # as a voice bleep this would be really funny
     r "AAAAAAAAAAAAAAAAAHHHHH!!!!"
-    r "I can’t believe I am going on a date with Kuma!!"
+    r "I can't believe I am going on a date with Kuma!!"
 
     # present time (end flashback)
 
+    scene white with slow_dissolve
+    scene bg gyaru_boutique with slow_dissolve
+
+    show reina neutral2:
+        ease 0.5 xpos 0.7
+    show kuma neutral:
+        ease 0.5 xpos 0.1
     r "Even now, I can't believe I am dating you!"
+    show kuma happy:
+        xpos 0.1
     k "Oh stop that..."
     # blushing happy reina here
+    show reina happy:
+        xpos 0.7
     r "Aww..."
     r "We've gone on so many amazing dates after that though!"
     r "I'm so happy to be with you!"
     k "I'm happy to be with ya too..."
+    show kuma talking:
+        xpos 0.1
     k "Come on, let's go get a few more things then head out."
     r "Yes ma'am!"
 
