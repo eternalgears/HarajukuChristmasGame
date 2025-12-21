@@ -1,8 +1,12 @@
 ﻿label gyaru_boutique:
 
     scene bg gyaru_boutique with slow_dissolve
-    # insert store door ringing sound
-    show reina happy
+    play sound "audio/store_bell.wav"
+
+    show reina happy with dissolve
+
+    pause
+    stop sound
 
     r "WOAHHHH!!"
     "Rows holding fluffy accessories and racks with gyaru-like clothing fill the store atmosphere."
@@ -15,43 +19,40 @@
     k "I knew you'd like the store."
     r "There is so much in here!"
     k "Oooo~ I've been meaning to show you it. Come on, let's go look over here."
-    show reina neutral:
-        xpos 0.7
+    show reina neutral
     
-    show kuma neutral:
-        xpos 0.1
+    show kuma neutral
     
     "We hustle over to a rack containing shoulderless shirts. I can already picture how cute Kuma would look in them."
 
-    show reina happy:
-        xpos 0.7
+    show reina happy
     r "Wow this shirt looks really pretty! And it's {i}sooo soft.{/i}"
     r "What do you think, Kuma?"
 
-    show kuma talking:
-        xpos 0.1
-    k "Hm? Let me see."
-    # give clothing sound
+    show kuma talking
 
-    show kuma happy:
-        xpos 0.1
+    k "Hm? Let me see."
+    play sound "audio/clothing_sound.wav"
+    pause
+
+    show kuma happy
+    stop sound
+    
     k "Wow it really is. I like the texture on it."
     r "That's good! This seems like something that you would wear."
-    show kuma talking:
-        xpos 0.1
+    show kuma talking
+
     k "Are ya sure? I wasn't totally set on this one because I already have plenty of shoulderless shirts."
     r "Absolutely! A new shirt changes the base outfit right? So then, you would have a new outfit to accessorize!"
     k "Hmm... you do have a point."
-    show kuma happy:
-        xpos 0.1
+    show kuma happy
+    
     k "I think I will buy it. I can pair this one with one of my mini skirts."
     r "Yaa~y!"
 
-    show reina neutral:
-        xpos 0.7
+    show reina neutral
     
-    show kuma neutral:
-        xpos 0.1
+    show kuma neutral
 
     "We continue looking through the store, scouting for accessories, skirts, etc."
 
@@ -137,12 +138,11 @@
 
     "A few days later, we were able to meet up for the photo shoot and take photos together."
 
-    show kuma talking:
-        xpos 0.1
+    show kuma talking
+
     k "Thank ya so so much for doing this with me! This is just what I needed for the magazine issue."
 
-    show reina happy:
-        xpos 0.7
+    show reina happy
 
     r "No no, thank you for featuring me!"
 
@@ -173,14 +173,16 @@
     r_nvl "What's up?"
     k_nvl "have u heard any rumors going around lately?"
     r_nvl "Not that I know of, why?"
-    k_nvl "well um one of my magazine rivals started a rumor we are dating… (^_^;)"
-    show reina surprised:
-        xpos 0.7
+    k_nvl "well um one of my magazine rivals started a rumor we are dating... (^_^;)"
+
+    show reina surprised
+
     r_nvl "WHAT???"
     k_nvl "yeah..."
     k_nvl "im sorry you got dragged into this mess."
-    show reina neutral2:
-        xpos 0.7
+
+    show reina neutral2
+
     r_nvl "No no! It's nothing you should put the blame on yourself for."
     r_nvl "The rumors will go away eventually so let's not worry too much! :3"
     k_nvl "yeah! ur right! ^_^"
@@ -209,32 +211,35 @@
 
     k "Reina!"
 
-    show reina neutral2:
-        xpos 0.7
+    show reina neutral2
+
     "Of course, I scrubbed my room clean like a maniac before she came here."
 
-    show kuma talking:
-        xpos 0.1
+    show kuma talking
+
     k "Woww. Your room is real organized."
-    show reina happy:
-        xpos 0.1
+
+    show reina happy
+
     r "Really?? Thank you so much."
-    show kuma happy:
-        xpos 0.1
+
+    show kuma laughing
+
     k "Haha! There's no need to thank me."
+
+    show kuma happy
 
     "Time flew by as we chatted about many things, like our love for fashion and the fashion magazines we've been keeping up with."
     "It got to a point where we also talked about our past, going into how we got into our fashion sub-styles."
 
-    show kuma talking:
-        xpos 0.1
+    show kuma talking
+
     k "I think I gotta head out soon..."
-    show reina neutral2:
-        xpos 0.7
+    show reina neutral2
+
     r "Oh that's okay! I should probably get to doing my homework."
     k "Well see ya soon."
-    show reina happy:
-        xpos 0.1
+    show reina happy
     r "Byeeeee!"
 
     # transition AGAIN
@@ -266,8 +271,9 @@
 
     r_nvl "Yeah sure!"
 
-    #on call 
-    show reina neutral2
+    #on call - assuming that only reina shows up since it's a call
+    show reina neutral2:
+        ease 0.5 xpos 0.5
 
     r "What's up? Did something happen?"
     k "Umm..."
@@ -301,20 +307,21 @@
         ease 0.5 xpos 0.7
     show kuma neutral:
         ease 0.5 xpos 0.1
+    
     r "Even now, I can't believe I am dating you!"
-    show kuma happy:
-        xpos 0.1
+    show kuma happy
+
     k "Oh stop that..."
     # blushing happy reina here
-    show reina happy:
-        xpos 0.7
+    show reina happy
+
     r "Aww..."
     r "We've gone on so many amazing dates after that though!"
     r "I'm so happy to be with you!"
     k "I'm happy to be with ya too..."
-    show kuma talking:
-        xpos 0.1
+    show kuma talking
+
     k "Come on, let's go get a few more things then head out."
     r "Yes ma'am!"
 
-    return
+    jump harajukuoptions
