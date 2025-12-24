@@ -70,8 +70,15 @@ define slow_dissolve = Dissolve(1.0)
 define config.nvl_list_length = None
 
 # transforms 
-transform easeright:
-    ease 0.5 xalign 0.7
+transform right:
+    xalign 0.8
+    yalign 1.0
+
+transform left:
+    xalign 0.2
+    yalign 1.0
+
+
 
 # images
 image white = "#fff"
@@ -115,6 +122,7 @@ label start:
     show reina neutral with dissolve
     "I flick the mascara up a little more, making sure it curls up just the way I want it to."
     "Today’s the big day! {w}I’m gonna spend a nice Christmas date with my girlfriend."
+
     r "Hehe… Kuma is gonna love this one…"
 
     # phone notification sound effect here
@@ -122,8 +130,7 @@ label start:
     r happy "AAHHHH!!!!!!!!"
     r "KUMAAAA!!!!!!!"
 
-    show reina neutral:
-        ease 0.5 xpos 0.7
+    show reina neutral at right with easeinright
     # texting portion (put proper texting conventions for coders)
 
     k_nvl "haiiii ^_^"
@@ -163,15 +170,27 @@ label start:
     scene bg harajuku city with slow_dissolve
     
     "The streets of Harajuku are filled with people in every corner. There’s some festive jazzy music among the constant chatter."
+
+    show reina neutral at right with easeinright
     r "Kuma said to meet at this corner.."
+    show kuma neutral at left with easeinleft
     k "Reinaaa?"
     r "Ah!"
     # sound effect of hugging and cg should be here
     r "KUUUMMAAA!!!"
     k "Ghk…!"
+
+    scene cg hug with slow_dissolve
+    $ renpy.pause(2.5)
+
     "I hugged her tight. It feels like I’m holding a cloud since we’re both wearing fluffy jackets."
     k "You’re squeezing me!"
     r "Huhu~"
+
+    scene bg harajuku city with slow_dissolve
+    show reina neutral at right 
+    show kuma neutral at left
+
     r "Oooo… I didn’t think that gyarus could have winter wear too. The leopard print coat looks soo cute on you!"
     r "Cute and gyaru as ever!"
     k "Wahhh… thank ya, thank ya."
