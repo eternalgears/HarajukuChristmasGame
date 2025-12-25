@@ -70,8 +70,13 @@ define slow_dissolve = Dissolve(1.0)
 define config.nvl_list_length = None
 
 # transforms 
-transform easeright:
-    ease 0.5 xalign 0.7
+transform right:
+    xalign 0.8
+    yalign 1.0
+
+transform left:
+    xalign 0.2
+    yalign 1.0
 
 # images
 image white = "#fff"

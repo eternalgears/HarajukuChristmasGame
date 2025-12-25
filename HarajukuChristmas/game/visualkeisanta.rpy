@@ -1,18 +1,16 @@
 ﻿label visualkeisanta:
     # (visual kei santa part shows up when reina and kuma are done with going everywhere in harujuku)
-    
+    # need santa sprites (???)
+
     show bg harajuku city
 
-    show reina neutral2:
-        ease 0.5 xpos 0.7
+    show reina neutral2 at right with easeinright
     
-    show kuma talking:
-        ease 0.5 xpos 0.1
+    show kuma talking at left with easeinleft
     
     k "Mannn... I’m beat."
     
-    show reina happy:
-        ease 0.5 xpos 0.7
+    show reina happy
 
     r "Hmm~ Hmm~"
     k "You’re so cheerful for spending almost 200k yen today."
@@ -21,19 +19,16 @@
     k "We gotta save up as much as we can for a nice home together..."
     k "Whaddya say, Reina? Should we save money starting now?"
 
-    show reina surprised:
-        xpos 0.7
+    show reina surprised
     
     r "M-MARRIED??"
     r "Are we getting married??"
 
-    show kuma neutral:
-        xpos 0.1
+    show kuma neutral
 
     k "..."
 
-    show kuma happy:
-        xpos 0.1
+    show kuma happy
     
     k "Come on! Let’s go home!"
     r "Wait a second Kuma..."
@@ -41,19 +36,33 @@
 
     r "Just you wait a second Kuma!"
     v "Ho ho ho..."
+
+    show reina neutral
+
     r "Eh?"
     v "Merry... Christmas..."
+
+    show kuma confused
+
     k "Ah.. that’s..."
     v "Can you take a video for me? I need to send it to Mrs. Claus..."
+
+    show reina neutral2
+
     r "S-sure!"
-    k "{size-=10} I know this guy." # smaller text for whispering
+    k "{size=24} I know this guy." # smaller text for whispering
 
     "The strange man hands me his phone, which was already recording."
 
     v "..."
+
+    show reina neutral
     r "..."
+    show kuma neutral
     k "..."
     v "........"
+    show reina surprised
+    show kuma confused
     v "MINNESANN {w}KONNICHI WAAARRRTS"
     v "YYYUUUUWAARTS"
     v "HAJIMETE"
@@ -66,6 +75,8 @@
     r "..."
     k "Um..."
     k "Let’s go, Reina."
+    hide kuma with dissolve
+    hide reina with dissolve
     v "OOIISSHIII DESSSUUUUUUU{nw}"
 
     jump apartment_end

@@ -1,2 +1,2 @@
 ﻿label lolita_boutique:
-    return
+    jump harajukuoptions

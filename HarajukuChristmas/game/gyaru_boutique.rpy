@@ -10,11 +10,9 @@
 
     r "WOAHHHH!!"
     "Rows holding fluffy accessories and racks with gyaru-like clothing fill the store atmosphere."
-    show reina happy:
-        ease 0.5 xpos 0.7
+    show reina happy at right with easeinright
     
-    show kuma happy:
-        ease 0.5 xpos 0.1
+    show kuma happy at left with easeinleft
     
     k "I knew you'd like the store."
     r "There is so much in here!"
@@ -106,8 +104,7 @@
 
 
     # in text
-    show reina neutral:
-        ease 0.5 xpos 0.7
+    show reina neutral at right with easeinright
     
     nvl clear
 
@@ -130,11 +127,9 @@
 
     # change scene for photoshoot
 
-    show reina neutral:
-        ease 0.5 xpos 0.7
+    show reina neutral at right with easeinright
     
-    show kuma neutral:
-        ease 0.5 xpos 0.1
+    show kuma neutral at left with easeinleft
 
     "A few days later, we were able to meet up for the photo shoot and take photos together."
 
@@ -204,10 +199,8 @@
     show reina happy with dissolve
     r "K-Kuma!"
 
-    show reina happy:
-        xpos 0.7
-    show kuma happy:
-        xpos 0.1
+    show reina happy at right with easeinright
+    show kuma happy at left with easeinleft
 
     k "Reina!"
 
@@ -253,8 +246,7 @@
 
     #in Text
 
-    show reina neutral:
-        ease 0.5 xpos 0.7
+    show reina neutral at right with easeinright
 
     k_nvl "hey. can we talk rn?"
 
@@ -266,8 +258,7 @@
     "She seems serious."
 
     #in Text
-    show reina neutral:
-        ease 0.5 xpos 0.7
+    show reina neutral at right with easeinright
 
     r_nvl "Yeah sure!"
 
@@ -303,10 +294,8 @@
     scene white with slow_dissolve
     scene bg gyaru_boutique with slow_dissolve
 
-    show reina neutral2:
-        ease 0.5 xpos 0.7
-    show kuma neutral:
-        ease 0.5 xpos 0.1
+    show reina neutral2 at right with easeinright
+    show kuma neutral at left with easeinleft
     
     r "Even now, I can't believe I am dating you!"
     show kuma happy
