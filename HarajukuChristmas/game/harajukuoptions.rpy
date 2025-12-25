@@ -16,15 +16,15 @@
     # doesn't work with menu, so leaving it as is until we get harajuku bg for imagebuttons
     menu:
         #if not Parfait:
-        "Parfait Candles":
+        "Parfait Candles" if not Parfait:
             $ Parfait = True
             jump parfait_candles
         #if not Lolita:
-        "Lolita Fashion Boutique":
+        "Lolita Fashion Boutique" if not Lolita:
             $ Lolita = True
             jump lolita_boutique
         #if not Gyaru:
-        "Gyaru Fashion Boutique":
+        "Gyaru Fashion Boutique" if not Gyaru:
             $ Gyaru = True
             jump gyaru_boutique
 
