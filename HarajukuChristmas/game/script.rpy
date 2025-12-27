@@ -95,8 +95,9 @@ style santa_text:
     outlines [(4, "#b52a2a", 0, 0)]
 
 label splashscreen:
+    scene white
     play sound "audio/splash.wav"
-    scene bg splash
+    scene bg splash with dissolve
     with Pause(1)
     $ renpy.pause()
 
@@ -137,6 +138,7 @@ label start:
     nvl_narrator "kuma~ :33 poked you."
     k_nvl "hiiii reinaaa"
     k_nvl "u preparing for the date?"
+    nvl_narrator "You poked kuma~ :33."
     r_nvl neutral "Ya :3"
     r_nvl "You also ready?"
     r_nvl "I can’t wait to see you :33"
