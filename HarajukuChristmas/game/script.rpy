@@ -67,6 +67,7 @@ image kuma = LayeredImageProxy("kuma1", transform=sprite_highlight("k"))
 # defaults 
 default preferences.text_cps = 40
 define slow_dissolve = Dissolve(1.0)
+define medium_dissolve = Dissolve(0.7)
 define config.nvl_list_length = None
 
 # transforms 
