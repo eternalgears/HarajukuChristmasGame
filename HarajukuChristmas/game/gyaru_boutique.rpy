@@ -1,5 +1,7 @@
 ﻿label gyaru_boutique:
 
+    $ Gyaru = True
+    jump harajukuoptions
     scene bg gyaru boutique with slow_dissolve
     play sound "audio/store_bell.wav"
 

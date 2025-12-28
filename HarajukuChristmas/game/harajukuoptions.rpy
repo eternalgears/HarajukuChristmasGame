@@ -11,20 +11,35 @@
 
     if Parfait and Lolita and Gyaru:
         jump visualkeisanta
+    else:
+        call screen shop_selection
     
-    # "if not [Variable]" is how to show/hide options for screen
-    # doesn't work with menu, so leaving it as is until we get harajuku bg for imagebuttons
-    menu:
-        #if not Parfait:
-        "Parfait Candles" if not Parfait:
-            $ Parfait = True
-            jump parfait_candles
-        #if not Lolita:
-        "Lolita Fashion Boutique" if not Lolita:
-            $ Lolita = True
-            jump lolita_boutique
-        #if not Gyaru:
-        "Gyaru Fashion Boutique" if not Gyaru:
-            $ Gyaru = True
-            jump gyaru_boutique
+    screen shop_selection:
+        if not Parfait:
+            imagebutton:
+                xpos 0.1179
+                ypos 0.769
+                xanchor 0.5
+                yanchor 1.0
+                idle "Parfait_Candles_Idle.png"
+                hover "Parfait_Candles_Hover.png"
+                action Jump("parfait_candles")
+        if not Lolita:
+            imagebutton:
+                xpos 0.3585
+                ypos 1.0039
+                xanchor 0.5
+                yanchor 1.0
+                idle "Lolita_Boutique_Idle.png"
+                hover "Lolita_Boutique_Hover.png"
+                action Jump("lolita_boutique")
+        if not Gyaru:
+            imagebutton:
+                xpos 0.815
+                ypos 1.04
+                xanchor 0.5
+                yanchor 1.0
+                idle "Gyaru_Boutique_Idle.png"
+                hover "Gyaru_Boutique_Hover.png"
+                action Jump("gyaru_boutique")
 
