@@ -1,22 +1,22 @@
 ﻿label visualkeisanta:
     # (visual kei santa part shows up when reina and kuma are done with going everywhere in harujuku)
-    # need santa sprites (???)
 
     show bg harajuku city
 
-    show reina neutral2 at right with easeinright
+    show reina neutral at right with easeinright
     
     show kuma talking at left with easeinleft
     
-    k "Mannn... I’m beat."
+    k "Mannn... I'm beat."
     
     show reina happy
 
     r "Hmm~ Hmm~"
-    k "You’re so cheerful for spending almost 200k yen today."
+    k "You're so cheerful for spending almost 200k yen today."
     r "Yeah? You spent like 80k today, right?"
-    k "Mhm. I’m quite worried about our married future."
+    k "Mhm. I'm quite worried about our married future."
     k "We gotta save up as much as we can for a nice home together..."
+    show kuma happy
     k "Whaddya say, Reina? Should we save money starting now?"
 
     show reina surprised
@@ -30,21 +30,25 @@
 
     show kuma happy
     
-    k "Come on! Let’s go home!"
+    k "Come on! Let's go home!"
     r "Wait a second Kuma..."
     "Kuma tugged on my hand, as if she was distracting me from her out of nowhere marriage proposal."
 
     r "Just you wait a second Kuma!"
+
+    stop music
+    show santa neutral
     v "Ho ho ho..."
 
     show reina neutral
 
     r "Eh?"
+    play music "audio/santa1.mp3" fadein 2.5
     v "Merry... Christmas..."
 
     show kuma confused
 
-    k "Ah.. that’s..."
+    k "Ah.. that's..."
     v "Can you take a video for me? I need to send it to Mrs. Claus..."
 
     show reina neutral2
@@ -63,6 +67,7 @@
     v "........"
     show reina surprised
     show kuma confused
+    show santa shouting
     v "MINNESANN {w}KONNICHI WAAARRRTS"
     v "YYYUUUUWAARTS"
     v "HAJIMETE"

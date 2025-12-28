@@ -52,6 +52,12 @@ layeredimage reina1:
             "reina_neutral"
         attribute happy:
             "reina_happy"
+        attribute surprised:
+            "reina_surprised"
+        attribute talking:
+            "reina_talking"
+        attribute laughing:
+            "reina_laughing"
 
 layeredimage kuma1:
     #at sprite_highlight('kuma')
@@ -60,9 +66,23 @@ layeredimage kuma1:
             "kuma_neutral"
         attribute happy:
             "kuma_happy"
+        attribute talking:
+            "kuma_talking"
+        attribute confused:
+            "kuma_confused"
+        attribute laughing:
+            "kuma_laughing"
+
+layeredimage santa1:
+    group emotion:
+        attribute neutral default:
+            "santa_neutral"
+        attribute shouting:
+            "santa_shouting"
 
 image reina = LayeredImageProxy("reina1", transform=sprite_highlight("r"))
 image kuma = LayeredImageProxy("kuma1", transform=sprite_highlight("k"))
+image santa = LayeredImageProxy("santa1", transform=sprite_highlight("v"))
 
 # defaults 
 default preferences.text_cps = 40
