@@ -1,34 +1,41 @@
 ﻿label parfait_candles:
-    scene bg parfait candles with slow_dissolve
-    show reina neutral with slow_dissolve
+    scene bg parfaitcandles with slow_dissolve:
+        zoom 0.375
+    play music "audio/parfaitcandles.mp3" fadein 0.5
+    window hide
+    $ renpy.pause(1.9)
     #making parfait candles has a cg and several transitions per "parfait making" steps
     "*ring ring*"
-    k "Ooouh..."
-    k "Is this a dessert making place?"
-    r "Kind of!"
+    show reina neutral at Rlower with slow_dissolve:
+        zoom 0.2
+    show kuma neutral at Llower with slow_dissolve:
+        zoom 0.2
+    k talking "Ooouh..."
+    k smiling "Is this a dessert making place?"
+    r smiling "Kind of!"
     r "I saw this once in a Moi-même-Moitié video where Mana-sama and Aoki Misako made parfait candles!"
-    k "Huh? Whozzat again?"
+    k neutral "Huh? Whozzat again?"
     # reina thinking sprite
-    r "Mana-sama is that one pretty doll from Malice Mizer...."
-    k "The real beautiful one with the blue hair and curls?"
-    r "Yeah!"
-    r "And Aoki is a pretty popular lolita model! Most well known and influential lolita if you ask me."
+    r talking "Mana-sama is that one pretty doll from Malice Mizer...."
+    k talking "The real beautiful one with the blue hair and curls?"
+    r laughing "Yeah!"
+    r smiling "And Aoki is a pretty popular lolita model! Most well known and influential lolita if you ask me."
     r "Ahhhh... I aspire to be like them someday..."
-    k "I gotcha! That’s why we gotta get ultra famous from our influencing life."
-    r "But they’re like! World-wide famous!"
-    k "I dunno if those would count as world-wide."
-    r "Everyone knows lolita fashion because of them..."
-    r "Even the people overseas!"
+    k smiling "I gotcha! That’s why we gotta get ultra famous from our influencing life."
+    r shocked "But they’re like! World-wide famous!"
+    k neutral "I dunno if those would count as world-wide."
+    r smiling "Everyone knows lolita fashion because of them..."
+    r laughing "Even the people overseas!"
     k "Huh..."
-    k "I always wondered how people overseas knew about lolita fashion..."
+    k talking "I always wondered how people overseas knew about lolita fashion..."
     k "I was scrolling Kinsta the other day and saw an American with Yamanba makeup."
-    r "Woahhh... the influencer pressure is getting close to me!"
-    k "Right? Maybe we are a part of spreading the culture."
-    r "That’s.. so..."
-    r "COOOL!!!"
+    r talking "Woahhh... the influencer pressure is getting close to me!"
+    k smiling "Right? Maybe we are a part of spreading the culture."
+    r smiling "That’s.. so..."
+    r laughing "COOOL!!!"
     "Suddenly, everyone stares at us. We definitely disturbed their candle making peace."
-    k "We should probably get started on those candles."
-    r "I’m down!"
+    k talking "We should probably get started on those candles."
+    r neutral "I’m down!"
 
     # parfait candles clerk: c
 

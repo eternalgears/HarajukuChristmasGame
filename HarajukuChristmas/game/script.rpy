@@ -100,6 +100,14 @@ transform center:
     xalign 0.5
     yalign 0.1
 
+#i was on something with these yaligns
+transform Rlower:
+    xalign 0.95
+    yalign -0.8
+
+transform Llower:
+    xalign 0.05
+    yalign -0.8
 
 # images
 image white = "#fff"
@@ -245,5 +253,5 @@ label start:
 
     hide reina
     hide kuma
-    
+
     jump harajukuoptions
