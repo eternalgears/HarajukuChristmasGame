@@ -148,7 +148,8 @@ label start:
     r "Hmm hmmm~"
     r "Just gotta get it over here.."
 
-    scene bg apartment with slow_dissolve
+    scene bg apartment with slow_dissolve:
+        zoom 0.375
     show reina neutral at center with dissolve:
         zoom 0.2
     "I flick the mascara up a little more, making sure it curls up just the way I want it to."
@@ -198,7 +199,8 @@ label start:
     r neutral "Let’s go!"
 
     #replace the line below with harajuku music later
-    scene bg harajuku city with slow_dissolve
+    scene bg harajuku with slow_dissolve:
+        zoom 0.375
     
     "The streets of Harajuku are filled with people in every corner. There’s some festive jazzy music among the constant chatter."
 
@@ -231,7 +233,8 @@ label start:
     k "You’re squeezing me!"
     r "Huhu~"
 
-    scene bg harajuku city with slow_dissolve
+    scene bg harajuku with slow_dissolve:
+        zoom 0.375
     show reina talking at right:
         zoom 0.2
     show kuma neutral at left:
@@ -251,7 +254,7 @@ label start:
     r laughing "LETS GO!!!"
     k laughing "Yeah!"
 
-    hide reina
-    hide kuma
+    hide reina with dissolve
+    hide kuma with dissolve
 
     jump harajukuoptions
