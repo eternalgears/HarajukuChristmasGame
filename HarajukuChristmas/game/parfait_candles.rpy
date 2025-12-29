@@ -197,7 +197,7 @@
     r neutral "And let me see yours..."
 
     # kumas messy ugly parfait candle here
-    "A messed up blue parfait candle with mismatched ornaments.. It looks gloomy compared to the one that you made."
+    "A messed up blue parfait candle with mismatched ornaments.. It looks gloomy compared to the one that I made."
 
     r laughing "Oh my gosh!!"
     r "It’s so so cute!!"
