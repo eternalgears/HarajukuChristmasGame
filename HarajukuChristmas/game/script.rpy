@@ -169,7 +169,6 @@ label start:
     r "Let’s go!"
 
     #replace the line below with harajuku music later
-    stop music fadeout 1.0
     scene bg harajuku city with slow_dissolve
     
     "The streets of Harajuku are filled with people in every corner. There’s some festive jazzy music among the constant chatter."
@@ -180,11 +179,22 @@ label start:
     k "Reinaaa?"
     r "Ah!"
     # sound effect of hugging and cg should be here
+
+    scene cg hug with slow_dissolve
     r "KUUUMMAAA!!!"
     k "Ghk…!"
 
-    scene cg hug with slow_dissolve
-    $ renpy.pause(2.5)
+    # panning transition for hug
+    window auto hide
+    show cg hug with slow_dissolve:
+        subpixel True ypos 1.23 zoom 1.32 
+        xpos 0.46 
+        linear 3.35 xpos 0.63 
+    with Pause(3.45)
+    show cg hug with slow_dissolve:
+        pos (0.63, 1.23) 
+    window auto show
+
 
     "I hugged her tight. It feels like I’m holding a cloud since we’re both wearing fluffy jackets."
     k "You’re squeezing me!"
