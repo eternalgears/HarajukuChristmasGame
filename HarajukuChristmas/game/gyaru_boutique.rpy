@@ -71,7 +71,8 @@
     r smiling "No no, I'm not laughing at you! I'm just remembering our collab back in high school."
 
     #flashback transition to high school
-    play music "audio/shopping + flashbacks - final mix w_ loop.mp3" fadein 2.5
+    scene pink with slow_dissolve
+    "A year ago..."
     scene white with slow_dissolve
     scene bg apartment with dissolve:
         zoom 0.375
@@ -83,8 +84,14 @@
     r shocked "Crap, I forgot I still have to finish that essay!"
     r "Uuu... I have to start now!"
 
-    show reina neutral
-
+    scene pink with slow_dissolve
+    with Pause(1.0)
+    scene bg apartment with dissolve:
+        zoom 0.375
+    show reina neutral at center with dissolve:
+        zoom 0.2
+    play sound "audio/phone_notification.mp3"
+    with Pause(1.0)
     "After a while of tedious work, I suddenly hear a notification sound from my phone."
 
     r "Hm?"
@@ -121,16 +128,22 @@
 
     # change scene for photoshoot
     scene pink with slow_dissolve
+    with Pause(1.0)
+    play sound "audio/photo.wav"
+    with Pause(1.5)
+    play sound "audio/photo.wav"
+    with Pause(1.5)
+    play sound "audio/photo.wav"
+    with Pause (1.5)
+    "A few days later, we were able to meet up for the photo shoot and take photos together."
     scene bg harajuku with slow_dissolve:
         zoom 0.375
 
-    show reina smiling at right with easeinright:
+    show reina smiling at right:
         zoom 0.2
-    
-    show kuma smiling at left with easeinleft:
+    show kuma smiling at left:
         zoom 0.2
-
-    "A few days later, we were able to meet up for the photo shoot and take photos together."
+    with sprite_dissolve
 
     k "Thank ya so so much for doing this with me! This is just what I needed for the magazine issue."
 
@@ -155,7 +168,7 @@
     play sound "audio/phone_notification.mp3"
     "Buzz buzz..."
 
-    r talking "Oh! It looks like I got a text from her!"
+    r "Oh! It looks like I got a text from her!"
 
     # in text
     show reina smiling at right with easeinright
@@ -180,7 +193,8 @@
     r_nvl "No no! It's nothing you should put the blame on yourself for."
     r_nvl "The rumors will go away eventually so let's not worry too much! :3"
     k_nvl "yeah! ur right! ^_^"
-    k_nvl "btw, would u wanna hang out sometime tomorrow?"
+    k_nvl "btw, would u wanna hang out at your place sometime tomorrow?"
+    k_nvl "no pressure tho! im just asking since we've hung out a few times"
     r_nvl "Sure!!!"
     k_nvl "kk. cya then!"
 
@@ -194,6 +208,8 @@
     "I don't want those rumors to mess up the bond that we have."
 
     scene pink with slow_dissolve
+    with Pause(0.5)
+    "The next day..."
     scene bg apartment with slow_dissolve:
         zoom 0.375
     
@@ -210,15 +226,26 @@
 
     "Of course, I scrubbed my room clean like a maniac before she came here."
 
-    k talking "Woww. Your room is real organized."
+    k talking "Woww. Your room is real organized. Supes cute!!"
+
+    k smiling "I love all the H*ts*ne M*ku merch!!"
 
     r smiling "Really?? Thank you so much."
 
     k laughing "Haha! There's no need to thank me."
 
+    scene pink with slow_dissolve
+    with Pause(1.0)
     "Time flew by as we chatted about many things, like our love for fashion and the fashion magazines we've been keeping up with."
     "It got to a point where we also talked about our past, going into how we got into our fashion sub-styles."
 
+    scene bg apartment with slow_dissolve:
+        zoom 0.375
+    show reina talking at right:
+        zoom 0.2
+    show kuma talking at left:
+        zoom 0.2
+    with sprite_dissolve
     k talking "I think I gotta head out soon..."
 
     r talking "Oh that's okay! I should probably get to doing my homework."
@@ -227,6 +254,7 @@
 
     # transition AGAIN
     scene pink with slow_dissolve
+    with Pause(1.0)
     scene bg apartment with slow_dissolve:
         zoom 0.375
     "A few months later..."
@@ -234,16 +262,20 @@
     show reina neutral at center with dissolve:
         zoom 0.2
     "I rushed back home to finish my homework so that I could call Kuma."
+    play sound "audio/phone_notification.mp3"
+    with Pause(1.0)
     "I was locked in on a physics question when I heard a buzz from my phone."
 
     #in Text
 
     show reina neutral at right with easeinright
 
+    # dramatic stop music scene
+    stop music fadeout 1.0
     k_nvl "hey. can we talk rn?"
 
     # in person 
-    show reina neutral:
+    show reina shocked:
         ease 0.5 xalign 0.5
 
     "There were so many things running through my head for what she could've meant."
@@ -253,44 +285,63 @@
     show reina neutral at right with easeinright
 
     r_nvl "Yeah sure!"
-
+    k_nvl "actually"
+    k_nvl "are you free to call?"
+    r_nvl talking "Yeah!"
+    play music "audio/phone_notification.mp3"
+    nvl_narrator "kuma~ :33 is calling you."
+    stop music
     #on call - assuming that only reina shows up since it's a call
     show reina talking:
         ease 0.5 xalign 0.5
 
     r "What's up? Did something happen?"
     k "Umm..."
-    k "I've been meaning to tell you this for a while now but... {w}I have feelings for you, Reina."
+    k "I've been meaning to tell you this for a while now but... {w}{size=24}ohhh my god...{/size}"
+    r smiling "It's okay Kuma! I won't judge."
+    k "I have feelings for you."
+    show reina shocked at center with hpunch
+    r "EHHH??"
     k "I love how you're so passionate about fashion design. You could go on and on about certain fabrics and sewing patterns."
+    show reina smiling
     k "And you're so cute, fun, kind, a lot of things. It's so hard not to like you!"
     k "I really love your presence! Just everything!"
     k "Would you like to go out on a date sometime...?"
 
+    play music "audio/gyaru boutique.mp3" fadein 2.5
+
     r shocked "Is this real life?? Oh my gosh..."
-    r smiling "Kuma, I think you're amazing as well!! I would gladly go on a date with you!"
+    r laughing "Kuma, I think you're amazing as well!! I would gladly go on a date with you!"
 
     # in person
-
+    scene pink with slow_dissolve
+    with Pause(0.5)
     "We talked a little while longer and then we eventually got off our call to do homework."
+    scene bg apartment with dissolve:
+        zoom 0.375
+    show reina talking at center with dissolve:
+        zoom 0.2
     r "Hehehehhehe..."
-    r "Huuuhuuu..."
+    r smiling "Huuuhuuu..."
     # note: make the screaming dialogue text smaller to show that her voice is muffled (possibly by a pillow)
     # as a voice bleep this would be really funny
-    r laughing "{size=24}AAAAAAAAAAAAAAAAAHHHHH!!!!"
+    show reina laughing at center with hpunch
+    r "{size=24}AAAAAAAAAAAAAAAAAHHHHH!!!!"
     r "{size=24}I can't believe I am going on a date with Kuma!!"
 
     # present time (end flashback)
-    play music "audio/gyaru boutique.mp3" fadein 2.5
 
     scene white with slow_dissolve
+    with Pause(1.0)
     scene bg gyaru boutique with slow_dissolve:
         zoom 0.375
 
-    show reina talking at right with easeinright:
+    show reina talking at right:
         zoom 0.2
-    show kuma neutral at left with easeinleft:
+    show kuma neutral at left:
         zoom 0.2
-    
+    with sprite_dissolve
+
     r "Even now, I can't believe I am dating you!"
 
     k smiling "Oh stop that..."
@@ -303,5 +354,9 @@
 
     k talking "Come on, let's go get a few more things then head out."
     r "Yes ma'am!"
+
+    scene bg harajuku with slow_dissolve:
+        zoom 0.375
+    play music "audio/apt-ost.mp3" fadein 1.5
 
     jump harajukuoptions

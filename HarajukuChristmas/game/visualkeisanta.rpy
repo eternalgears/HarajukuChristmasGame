@@ -1,13 +1,16 @@
 ﻿label visualkeisanta:
     # (visual kei santa part shows up when reina and kuma are done with going everywhere in harujuku)
+    scene pink slow_dissolve
+    scene bg harajuku with slow_dissolve:
+        zoom 0.375
 
     show bg harajuku:
         zoom 0.375
 
-    show reina neutral at right with easeinright:
+    show reina neutral at right with sprite_dissolve:
         zoom 0.2
     
-    show kuma talking at left with easeinleft:
+    show kuma talking at left with sprite_dissolve:
         zoom 0.2
     
     k "Mannn... I'm beat."

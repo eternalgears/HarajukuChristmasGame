@@ -3,14 +3,15 @@
 #when all image buttons are pressed, then proceed to the visual kei santa label (visualkeisanta)
 
 #after visual kei santa part, then go to apartment_end label
-    scene bg harajuku with slow_dissolve:
+    hide reina
+    hide kuma
+    
+    scene bg harajuku:
         zoom 0.375
 
     default Parfait = False
     default Lolita = False
     default Gyaru = False
-
-    play music "audio/shopping + flashbacks - final mix w_ loop.mp3" fadein 2.5
 
     if Parfait and Lolita and Gyaru:
         jump visualkeisanta

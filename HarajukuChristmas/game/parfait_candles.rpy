@@ -49,9 +49,9 @@
     $ renpy.pause(1.0)
     scene bg parfaitcandles with slow_dissolve:
         zoom 0.375
-    show reina neutral at Rlower with slow_dissolve:
+    show reina neutral at Rlower with sprite_dissolve:
         zoom 0.2
-    show kuma neutral at Llower with slow_dissolve:
+    show kuma neutral at Llower with sprite_dissolve:
         zoom 0.2
     # drag and drop mechanic here?
 
@@ -84,9 +84,9 @@
 
     scene bg parfaitcandles with slow_dissolve:
         zoom 0.375
-    show reina neutral at Rlower with dissolve:
+    show reina neutral at Rlower with sprite_dissolve:
         zoom 0.2
-    show kuma neutral at Llower with dissolve:
+    show kuma neutral at Llower with sprite_dissolve:
         zoom 0.2
     "{i}Step three: add melted wax to the glass.{/i}"
 
@@ -142,9 +142,9 @@
 
     scene bg parfaitcandles with slow_dissolve:
         zoom 0.375
-    show reina neutral at Rlower with dissolve:
+    show reina neutral at Rlower with sprite_dissolve:
         zoom 0.2
-    show kuma neutral at Llower with dissolve:
+    show kuma neutral at Llower with sprite_dissolve:
         zoom 0.2
     "{i}Step six: Put the ice cream scoops on top.{/i}"
 
@@ -186,9 +186,9 @@
     scene pink with slow_dissolve
     scene bg parfaitcandles with slow_dissolve:
         zoom 0.375
-    show reina neutral at right with dissolve:
+    show reina neutral at right with sprite_dissolve:
         zoom 0.2
-    show kuma neutral at left with dissolve:
+    show kuma neutral at left with sprite_dissolve:
         zoom 0.2
     r laughing "It’s done!!"
     "My parfait has pink liquid wax, with a purple scoop! There’s bows, hearts, and bells to show that it’s a one of a kind Christmas parfait."
@@ -213,11 +213,11 @@
     r laughing "Alright, alright!"
 
     play music "audio/apt-ost.mp3" fadein 1.5
-    scene bg harajuku with slow_dissolve:
+    scene bg harajuku with medium_dissolve:
         zoom 0.375
-    show reina neutral at right with slow_dissolve:
+    show reina neutral at right with medium_dissolve:
         zoom 0.2
-    show kuma neutral at left with slow_dissolve:
+    show kuma neutral at left with medium_dissolve:
         zoom 0.2
 
     k "Oh my god... that triple strawberry sundae parfait was so good.."
@@ -228,9 +228,5 @@
     k "Yeah, yeah... and half the calories of mine apparently."
     r laughing "We could’ve shared!"
     k smiling "You have a point..."
-    k "Where to next, Reina?"
-
-    hide reina with dissolve
-    hide kuma with dissolve
 
     jump harajukuoptions

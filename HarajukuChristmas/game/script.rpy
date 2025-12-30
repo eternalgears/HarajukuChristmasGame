@@ -90,7 +90,7 @@ image kuma = LayeredImageProxy("kuma1", transform=sprite_highlight("k"))
 default preferences.text_cps = 40
 define slow_dissolve = Dissolve(1.0)
 define medium_dissolve = Dissolve(0.7)
-#define sprite_dissolve = Dissolve(0.3)
+define sprite_dissolve = Dissolve(0.3)
 define config.nvl_list_length = None
 #define config.say_attribute_transition = sprite_dissolve
 default preferences.fullscreen = False
@@ -169,6 +169,9 @@ label start:
     r talking "Hehe… Kuma is gonna love this one…"
 
     # phone notification sound effect here
+    window hide
+    play sound "audio/phone_notification.mp3"
+    with Pause(1.0)
 
     r laughing "AAHHHH!!!!!!!!"
     r "KUMAAAA!!!!!!!"
@@ -206,6 +209,7 @@ label start:
     r smiling "I’ve got to add a photo for Kinsta!"
 
     # photo snapping sound effects
+    play sound "audio/photo.wav"
     "(snaps some photos)"
     r neutral "Let’s go!"
 
@@ -259,11 +263,12 @@ label start:
     k smiling "Wahhh… thank ya, thank ya."
     k talking "Your coord is so cute too~"
     k neutral "Hopefully it ain’t too much trouble to get a Christmas print JSK?"
-    r shocked "I stayed up at 12 am bidding with this other lolita online to get it…"
+    r smiling "It's fine!! I got this one last year."
+    r shocked "But I do remember staying up at 12 am bidding with this other lolita online..."
     r "Since it’s in season and all!"
-    k shocked "Yikes…"
+    k shocked "Yikes..."
     k smiling "It looks like ya would’ve been cuter in it anyway."
-    r smiling "You’re such a flirt…"
+    r smiling "You’re such a flirt..."
     r laughing "OKAY!!!"
     r laughing "LETS GO!!!"
     k laughing "Yeah!"

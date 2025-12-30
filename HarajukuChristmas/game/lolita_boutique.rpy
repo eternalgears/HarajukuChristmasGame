@@ -4,9 +4,9 @@
     play music "audio/lolitaboutique.mp3" fadein 1.5
     scene bg lolitaboutique with slow_dissolve:
         zoom 0.375
-    show reina smiling at right with slow_dissolve:
+    show reina smiling at right with easeinleft:
         zoom 0.2
-    show kuma neutral at left with slow_dissolve:
+    show kuma neutral at left with easeinleft:
         zoom 0.2
     pause
     r "EEEEKK!! This place is really packed!"
@@ -57,6 +57,13 @@
     "I carefully grabbed my headpiece and tied it."
     r "Perfect!"
     # photo snapping sfx
+    window hide
+    play sound "audio/photo.wav"
+    with Pause(1.0)
+    play sound "audio/photo.wav"
+    with Pause(1.0)
+    play sound "audio/photo.wav"
+    with Pause(1.0)
     "I take many photos, making sure they are positioned correctly to the camera. I have to show my outfit at the best angles, after all!"
     r "This looks like enough..."
     "I scrolled through my gallery and carefully chose which photos to upload."
@@ -67,9 +74,9 @@
     # Change to present
     scene bg lolitaboutique with slow_dissolve:
         zoom 0.375
-    show reina neutral at right with slow_dissolve:
+    show reina neutral at right with sprite_dissolve:
         zoom 0.2
-    show kuma neutral at left with slow_dissolve:
+    show kuma neutral at left with sprite_dissolve:
         zoom 0.2
     r "Ehhh... that’s all I can remember..."
     k smiling "Don’t worry bout’ it! I remember the rest."
@@ -103,9 +110,9 @@
     # Back to present 
     scene bg lolitaboutique with slow_dissolve:
         zoom 0.375
-    show reina laughing at right with slow_dissolve:
+    show reina laughing at right with sprite_dissolve:
         zoom 0.2
-    show kuma smiling at left with slow_dissolve:
+    show kuma smiling at left with sprite_dissolve:
         zoom 0.2
     play music "audio/lolitaboutique.mp3"
     r "Oh! I remember that now!!"
@@ -148,7 +155,7 @@
     r laughing "Honestly you... you got so confident all of a sudden..."
     "Her once serious expression transformed into her usual smile. Still holding hands, we stepped out of the store with our fastening hearts."
 
-    scene bg harajuku with slow_dissolve:
+    scene bg harajuku with medium_dissolve:
         zoom 0.375
     play music "audio/apt-ost.mp3" fadein 1.5
 
