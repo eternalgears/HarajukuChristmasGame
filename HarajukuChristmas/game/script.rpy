@@ -81,9 +81,9 @@ image kuma = LayeredImageProxy("kuma1", transform=sprite_highlight("k"))
 default preferences.text_cps = 40
 define slow_dissolve = Dissolve(1.0)
 define medium_dissolve = Dissolve(0.7)
-define sprite_dissolve = Dissolve(0.2)
+#define sprite_dissolve = Dissolve(0.3)
 define config.nvl_list_length = None
-define config.say_attribute_transition = sprite_dissolve
+#define config.say_attribute_transition = sprite_dissolve
 default preferences.fullscreen = False
 default preferences.skip_unseen = False
 
@@ -216,7 +216,7 @@ label start:
     window hide
     scene cg hug with slow_dissolve
     pause
-    
+
     r "KUUUMMAAA!!!"
     k "Ghk…!"
 
