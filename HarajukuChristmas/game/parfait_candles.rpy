@@ -6,6 +6,7 @@
     $ renpy.pause(1.9)
     #making parfait candles has a cg and several transitions per "parfait making" steps
     $ Parfait = True
+    play sound "audio/store_bell.wav"
     "*ring ring*"
     show reina neutral at right with slow_dissolve:
         zoom 0.2
@@ -84,10 +85,11 @@
 
     scene bg parfaitcandles with slow_dissolve:
         zoom 0.375
-    show reina neutral at Rlower with sprite_dissolve:
+    show reina neutral at Rlower:
         zoom 0.2
-    show kuma neutral at Llower with sprite_dissolve:
+    show kuma neutral at Llower:
         zoom 0.2
+    with sprite_dissolve
     "{i}Step three: add melted wax to the glass.{/i}"
 
     "The melted wax, which was provided to us by the staff just now, is in a creamer dispenser."

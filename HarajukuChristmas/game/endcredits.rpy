@@ -4,7 +4,7 @@
     show text "Hii!! The end!! (>_<)" 
     with slow_dissolve
     pause
-    show text "{size=50}{color=#FF96B0}Concept Artists!{/size}{/color}\nChloe Choi\nAitana"
+    show text "{size=50}{color=#FF96B0}Concept Artists!{/size}{/color}\nChloe Choi\nAitana Navarrete"
     with dissolve
     $ renpy.pause(4.0)
     show text "{size=50}{color=#FF96B0}Writers!{/size}{/color}\n{i}Lead Writer{/i} - Jaden Nguyen\n{i}Writer{/i} - Braden Buell\n{i}Writer{/i} - Katie Sanchez"

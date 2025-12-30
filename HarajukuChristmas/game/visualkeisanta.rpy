@@ -7,11 +7,11 @@
     show bg harajuku:
         zoom 0.375
 
-    show reina neutral at right with sprite_dissolve:
+    show reina neutral at right:
         zoom 0.2
-    
-    show kuma talking at left with sprite_dissolve:
+    show kuma talking at left:
         zoom 0.2
+    with sprite_dissolve
     
     k "Mannn... I'm beat."
 

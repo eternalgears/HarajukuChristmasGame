@@ -209,7 +209,7 @@ label start:
     r smiling "I’ve got to add a photo for Kinsta!"
 
     # photo snapping sound effects
-    play sound "audio/photo.wav"
+    play sound "<volume 4.0>audio/photo.wav"
     "(snaps some photos)"
     r neutral "Let’s go!"
 
@@ -257,6 +257,7 @@ label start:
         zoom 0.2
     show kuma neutral at left:
         zoom 0.2
+    with sprite_dissolve
 
     r "Oooo… I didn’t think that gyarus could have winter wear too. The leopard print coat looks soo cute on you!"
     r laughing "Cute and gyaru as ever!"

@@ -129,11 +129,11 @@
     # change scene for photoshoot
     scene pink with slow_dissolve
     with Pause(1.0)
-    play sound "audio/photo.wav"
+    play sound "<volume 4.0>audio/photo.wav"
     with Pause(1.5)
-    play sound "audio/photo.wav"
+    play sound "<volume 4.0>audio/photo.wav"
     with Pause(1.5)
-    play sound "audio/photo.wav"
+    play sound "<volume 4.0>audio/photo.wav"
     with Pause (1.5)
     "A few days later, we were able to meet up for the photo shoot and take photos together."
     scene bg harajuku with slow_dissolve:

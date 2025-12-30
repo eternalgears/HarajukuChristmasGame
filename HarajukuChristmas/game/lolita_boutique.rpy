@@ -4,11 +4,12 @@
     play music "audio/lolitaboutique.mp3" fadein 1.5
     scene bg lolitaboutique with slow_dissolve:
         zoom 0.375
-    show reina smiling at right with easeinleft:
+    show reina laughing at right:
         zoom 0.2
-    show kuma neutral at left with easeinleft:
+    show kuma neutral at left:
         zoom 0.2
-    pause
+    with easeinleft
+    with Pause(1.0)
     r "EEEEKK!! This place is really packed!"
     k talking "Well ya know.. it is the holiday season..."
     r smiling"Hmm... well you know what this calls for?"
@@ -23,23 +24,28 @@
     r neutral "Oh gosh..."
     r smiling "I only remember up until I posted my photos..."
     scene white with slow_dissolve
-    pause
+    "Back then..."
     # Enter flashback (black fade in fade out to backstory cg)
-    stop music fadeout 1.5
+    play music "audio/crowd.mp3" fadein 2.5 fadeout 2.0
     scene bg classroom with slow_dissolve
-    "I sit isolated in the back of the classroom, eavesdroping on my classmates' chatter about their after school plans and the newest console release."
+    "I sit isolated in the back of the classroom, eavesdropping on my classmates' chatter about their after school plans and the newest console release."
     window hide
     scene cg flashback with slow_dissolve
     pause
 
     r "(Sigh...)"
-    "I stared at the clock that was seemingly stuck in place."
-    "This day couldn’t get any longer, I suppose."
+    "I stared at the clock, waiting for the school bell to start."
+    "Tick...{w}tick...{w}tick..."
 
     # insert school bell sound
+    play sound "<volume 5.0>audio/school.mp3"
+    with Pause(10.583)
+
     scene bg classroom with slow_dissolve
+    stop music fadeout 20.0
     "Students rushed out of the classroom at the first sound of the bell, probably eager to be first at the nearest arcades and cafes."
     "I waited for the crowd to die down before I finally made my way out the door."
+    play music "audio/winter.wav" fadein 5.0 fadeout 5.0
     scene white with slow_dissolve
     "The cold breeze on the walk home made me shiver uncontrollably."
     r "Ah...I wish I had brought a thicker jacket."
@@ -58,11 +64,11 @@
     r "Perfect!"
     # photo snapping sfx
     window hide
-    play sound "audio/photo.wav"
+    play sound "<volume 4.0>audio/photo.wav"
     with Pause(1.0)
-    play sound "audio/photo.wav"
+    play sound "<volume 4.0>audio/photo.wav"
     with Pause(1.0)
-    play sound "audio/photo.wav"
+    play sound "<volume 4.0>audio/photo.wav"
     with Pause(1.0)
     "I take many photos, making sure they are positioned correctly to the camera. I have to show my outfit at the best angles, after all!"
     r "This looks like enough..."
@@ -74,10 +80,12 @@
     # Change to present
     scene bg lolitaboutique with slow_dissolve:
         zoom 0.375
-    show reina neutral at right with sprite_dissolve:
+    show reina neutral at right:
         zoom 0.2
-    show kuma neutral at left with sprite_dissolve:
+    show kuma neutral at left:
         zoom 0.2
+    with sprite_dissolve
+
     r "Ehhh... that’s all I can remember..."
     k smiling "Don’t worry bout’ it! I remember the rest."
     "Kuma rushes over to another rack and sorts through all the jumperskirts until she finds a really familiar one."
@@ -88,10 +96,16 @@
     k neutral "I wasn’t president of the fashion club in high school for nothing..."
 
     # To Kuma’s flashback
-    stop music fadeout 1.5
+    scene white with slow_dissolve
+    k "When we met, I remember..."
+    with Pause(1.0)
+    play music "<volume 0.5>audio/crowd.mp3" fadein 1.5 fadeout 2.0
     scene bg classroom with slow_dissolve
     "I stood in between many of my club officer friends in front of a classroom."
-    k "Aaaand that concludes the club meeting. If you guys have any questions about the upcoming fashion swap meet, please let me know!"
+    stop music fadeout 20.0
+    with hpunch
+    k "Aaaand that concludes the club meeting!!"
+    k "If you guys have any questions about the upcoming fashion swap meet, please let me know!"
     "I waited for everyone to leave the classroom and then sat at an empty desk."
     "As I clicked on the search bar, I was reminded of who I had looked up earlier that day."
     "A rising small lolita fashion Kinsta creator who posts a lot of intricate lolita coords."
@@ -110,10 +124,12 @@
     # Back to present 
     scene bg lolitaboutique with slow_dissolve:
         zoom 0.375
-    show reina laughing at right with sprite_dissolve:
+    show reina laughing at right:
         zoom 0.2
-    show kuma smiling at left with sprite_dissolve:
+    show kuma smiling at left:
         zoom 0.2
+    with sprite_dissolve
+
     play music "audio/lolitaboutique.mp3"
     r "Oh! I remember that now!!"
     r smiling "That jumperskirt (even though it is the most expensive one I own) is one of my favorite pieces!! I was starting to gain traction on Kinsta because of it."
@@ -147,12 +163,15 @@
     k laughing "I can still feel the adrenaline rush sometimes. Not even the rival magazines’ drama has made me feel so on edge."
     r neutral "The emotion sounds similar to what I felt that day..."
     r "Despite the weather being cold and harsh that night, your follow made me forget all about it. It truly brought me such great warmth."
-    "Kuma held my hand, interlocking our fingers. Her eyes looked into me deeply."
+    "Kuma held my hands, holding my gloves with care. Her eyes looked into me deeply."
     k neutral "Just to be clear..."
-    k smiling "I love being in your presence, Reina." 
-    k "I’d trade years of my lifespan if it meant I could spend a minute with you. This life means nothing if I can’t spend the rest of it with you."
+    k "I love being in your presence, Reina." 
+    k talking "I’d trade years of my lifespan if it meant I could spend a minute with you. This life means nothing if I can’t spend the rest of it with you."
+    show reina talking
     "I couldn’t do much except blush and look away, unable to withstand her stare."
+    "A whole lifespan? She can't be serious."
     r laughing "Honestly you... you got so confident all of a sudden..."
+    show kuma smiling 
     "Her once serious expression transformed into her usual smile. Still holding hands, we stepped out of the store with our fastening hearts."
 
     scene bg harajuku with medium_dissolve:
