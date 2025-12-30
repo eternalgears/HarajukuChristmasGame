@@ -1,4 +1,5 @@
 ﻿label lolita_boutique:
+    $ Lolita = True
     #Enter Lolita Fashion Boutique
     play music "audio/lolitaboutique.mp3" fadein 1.5
     scene bg lolitaboutique with slow_dissolve:

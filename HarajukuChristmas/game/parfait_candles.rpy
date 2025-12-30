@@ -5,6 +5,7 @@
     window hide
     $ renpy.pause(1.9)
     #making parfait candles has a cg and several transitions per "parfait making" steps
+    $ Parfait = True
     "*ring ring*"
     show reina neutral at right with slow_dissolve:
         zoom 0.2

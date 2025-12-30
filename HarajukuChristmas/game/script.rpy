@@ -74,8 +74,17 @@ layeredimage kuma1:
         attribute laughing:
             "kuma_laughing.png"
 
+layeredimage santa:
+    at sprite_highlight("santa")
+    group emotion:
+        attribute neutral default:
+            "santa_neutral.png"
+        attribute shouting:
+            "santa_shouting.png"
+
 image reina = LayeredImageProxy("reina1", transform=sprite_highlight("r"))
 image kuma = LayeredImageProxy("kuma1", transform=sprite_highlight("k"))
+#image santa = LayeredImageProxy("santa1", transform=sprite_highlight("v"))
 
 # defaults 
 default preferences.text_cps = 40
