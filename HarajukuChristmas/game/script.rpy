@@ -143,9 +143,9 @@ label splashscreen:
 
 ########### GAME START ########
 label start:
-
+    stop music fadeout 2.0
     scene pink with dissolve
-    play music "audio/apt-ost.mp3" fadein 2.5
+    play music "audio/apt-ost.mp3" fadein 0.5
     r "Hmm hmmm~"
     r "Just gotta get it over here.."
 
@@ -153,6 +153,7 @@ label start:
         zoom 0.375
     show reina neutral at center with dissolve:
         zoom 0.2
+    $ persistent.endingOne = False
     "I flick the mascara up a little more, making sure it curls up just the way I want it to."
     "Today’s the big day! {w}I’m gonna spend a nice Christmas date with my girlfriend."
 

@@ -86,5 +86,7 @@
     "I giggled into her chest. I feel bad about having her reassure me but... she seems to really enjoy this moment."
     "The blanket’s warmth and the sound of her heartbeat was all that I needed after such a long day."
 
-
-    return
+    $ persistent.endingOne = True
+    scene black with slow_dissolve
+    pause
+    jump endcredits

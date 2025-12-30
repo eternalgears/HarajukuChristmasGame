@@ -298,8 +298,8 @@ screen navigation():
         style_prefix "navigation"
 
         # xpos gui.navigation_xpos
-        xpos -0.006
-        yalign 0.88
+        xalign 0.02
+        yalign 0.7
 
         #spacing gui.navigation_spacing
         spacing 1
@@ -381,7 +381,8 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
-
+    if persistent.endingOne:
+        add "images/cg apartmentend.png"
     ## This empty frame darkens the main menu.
     frame:
         style "main_menu_frame"
@@ -558,8 +559,8 @@ style game_menu_label_text:
     yalign 0.5
 
 style return_button:
-    xpos gui.navigation_xpos
-    yalign 1.0
+    xalign 0.08
+    yalign 0.25
     yoffset -45
 
 
