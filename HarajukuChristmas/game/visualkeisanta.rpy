@@ -1,6 +1,7 @@
 ﻿label visualkeisanta:
     # (visual kei santa part shows up when reina and kuma are done with going everywhere in harujuku)
-    scene pink slow_dissolve
+    scene pink with slow_dissolve
+    pause
     scene bg harajuku with slow_dissolve:
         zoom 0.375
 
