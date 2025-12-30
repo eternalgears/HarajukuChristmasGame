@@ -118,6 +118,15 @@ transform Llower:
     xalign 0.05
     yalign -0.8
 
+
+#transforms for vkei santa part
+transform altright:
+    xalign 1.1
+    yalign 0.1
+
+transform altleft:
+    xalign -0.1
+    yalign 0.1
 # images
 image white = "#fff"
 image pink = "#ffd9d9"

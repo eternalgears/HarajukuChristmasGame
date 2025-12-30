@@ -30,7 +30,7 @@
     
     k smiling "Come on! Let's go home!"
     r "Wait a second Kuma..."
-    "Kuma tugged on my hand, as if she was distracting me from her out of nowhere marriage proposal."
+    "Kuma tugged on my hand, gesturing me to go home. She's clearly trying to distract me from her out of nowhere marriage proposal!"
 
     r "Just you wait a second Kuma!"
 
@@ -38,6 +38,11 @@
     show santa neutral at center:
         zoom 0.2
     v "{cps=10}Ho ho ho..."
+    show reina shocked at altright:
+        zoom 0.2
+    show kuma smiling at altleft:
+        zoom 0.2
+    with ease
 
     r neutral "Eh?"
     play music "audio/santa1.mp3" fadein 2.5
@@ -60,17 +65,17 @@
     show kuma shocked
     show santa shouting
     v "MINNESANN {w}KONNICHI WAAARRRTS" with hpunch
-    v "YYYUUUUWAARTS"
-    v "HAJIMETE"
-    v "HA{w}JI{w}METEE"
-    v neutral "Seven Eleven."
-    v shouting "DE{w}DE{w}DE{w} ONIGIRI"
+    v "YYYUUUUWAARTS" with hpunch
+    v "HAJIMETE" with hpunch
+    v "HA{w}JI{w}METEE" with hpunch
+    v neutral "Seven Eleven." with slow_dissolve
+    v shouting "DE{w}DE{w}DE{w} ONIGIRI" with hpunch
     v "KAI MASTER"
-    v "JAJAJAJAJAJAJAJA{nw}"
+    v "JA{w}JA{w}JA{w}JA{w}JA{w}JA{w}JA{w}JA" with hpunch
     v "ITDAKIMASUUUU!!!!" with hpunch
     r "..."
-    k "Um..."
-    k "Let's go, Reina."
+    k neutral "Um..."
+    k talking "Let's go, Reina."
     hide kuma with dissolve
     hide reina with dissolve
     v "OOIISSHIII DESSSUUUUUUU{nw}" with hpunch

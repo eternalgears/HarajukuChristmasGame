@@ -4,6 +4,7 @@
     show text "Hii!! The end!! (>_<)" 
     with slow_dissolve
     pause
+    scene endcredits1 with sprite_dissolve
     show text "{size=50}{color=#FF96B0}Concept Artists!{/size}{/color}\nChloe Choi\nAitana Navarrete"
     with dissolve
     $ renpy.pause(4.0)
@@ -13,6 +14,7 @@
     show text "{size=50}{color=#FF96B0}Artists!{/size}{/color}\n{i}Backgrounds{/i} - Chloe Choi\n{i}CGs{/i} - Bao-Nhi Nguyen\n{i}Sprites{/i} - Gabriela Montante\n{i}School BG{/i} - Mazie Berry\n{i}UI{/i} - Jaden Nguyen"
     with dissolve
     $ renpy.pause(4.0)
+    scene endcredits2 with sprite_dissolve
     show text "{size=50}{color=#FF96B0}Programming!{/size}{/color}\nJaden Nguyen\nGrace Seeberger"
     with dissolve
     $ renpy.pause(4.0)
@@ -22,6 +24,7 @@
     show text "{size=50}{color=#FF96B0}Game Testers!{/size}{/color}\nAiden Clary\nNicolas Hermoza\nMaxwell Ali\nKiran Dinakaran"
     with dissolve
     $ renpy.pause(4.0)
+    scene endcredits3 with sprite_dissolve
     show text "{size=50}{color=#FF96B0}Project Manager!{/size}{/color}\nJaden Nguyen"
     with dissolve
     $ renpy.pause(4.0)

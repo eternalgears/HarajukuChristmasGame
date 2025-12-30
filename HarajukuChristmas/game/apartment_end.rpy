@@ -1,4 +1,6 @@
 ﻿label apartment_end:
+    scene black with slow_dissolve
+    with Pause(1.0)
     play music "audio/apartmentend.mp3" fadein 0.5
     scene bg apartmentend with slow_dissolve:
         zoom 0.375
@@ -85,7 +87,9 @@
     window auto show
     "I giggled into her chest. I feel bad about having her reassure me but... she seems to really enjoy this moment."
     "The blanket’s warmth and the sound of her heartbeat was all that I needed after such a long day."
-
+    k "Goodnight, Reina."
+    r "Hehehe..."
+    r "Goodnight, Kuma!! ^_^"
     $ persistent.endingOne = True
     scene black with slow_dissolve
     pause
