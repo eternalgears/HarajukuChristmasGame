@@ -112,6 +112,7 @@ transform Llower:
 # images
 image white = "#fff"
 image pink = "#ffd9d9"
+image black = "#000000"
 
 # outline text
 style reina_text:

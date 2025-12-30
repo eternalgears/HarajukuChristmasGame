@@ -151,4 +151,5 @@
         zoom 0.375
     play music "audio/apt-ost.mp3" fadein 1.5
 
-    jump harajukuoptions
+    jump apartment_end
+    # note to self: change this to harajuku options
