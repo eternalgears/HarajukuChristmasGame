@@ -3,11 +3,14 @@
 #when all image buttons are pressed, then proceed to the visual kei santa label (visualkeisanta)
 
 #after visual kei santa part, then go to apartment_end label
-    scene bg harajuku city with slow_dissolve
+    scene bg harajuku city with slow_dissolve:
+        zoom 0.375
 
     default Parfait = False
     default Lolita = False
     default Gyaru = False
+
+    play music "audio/shopping + flashbacks - final mix w_ loop.mp3" fadein 2.5
 
     if Parfait and Lolita and Gyaru:
         jump visualkeisanta
@@ -21,6 +24,8 @@
                 ypos 0.769
                 xanchor 0.5
                 yanchor 1.0
+                hover_sound "audio/reina.wav"
+                activate_sound "audio/kuma.wav"
                 idle "Parfait_Candles_Idle.png"
                 hover "Parfait_Candles_Hover.png"
                 action Jump("parfait_candles")
@@ -30,6 +35,8 @@
                 ypos 1.0039
                 xanchor 0.5
                 yanchor 1.0
+                hover_sound "audio/reina.wav"
+                activate_sound "audio/kuma.wav"
                 idle "Lolita_Boutique_Idle.png"
                 hover "Lolita_Boutique_Hover.png"
                 action Jump("lolita_boutique")
@@ -39,6 +46,8 @@
                 ypos 1.04
                 xanchor 0.5
                 yanchor 1.0
+                hover_sound "audio/reina.wav"
+                activate_sound "audio/kuma.wav"
                 idle "Gyaru_Boutique_Idle.png"
                 hover "Gyaru_Boutique_Hover.png"
                 action Jump("gyaru_boutique")

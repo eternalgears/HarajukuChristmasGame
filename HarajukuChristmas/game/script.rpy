@@ -45,44 +45,46 @@ define c = Character("Clerk", color="#ffffff", style="santa_text", callback = na
 define r_nvl = Character("Reina", kind = nvl, image = "reina", callback = Phone_SendSound)
 define k_nvl = Character("kuma~ :33", kind = nvl, callback = Phone_ReceiveSound)
 
+# Sprite groups 
 layeredimage reina1:
     #at sprite_highlight('reina')
     group emotion:
         attribute neutral default:
-            "reina_neutral"
-        attribute happy:
-            "reina_happy"
-        attribute surprised:
-            "reina_surprised"
+            "reina_neutral.png"
         attribute talking:
-            "reina_talking"
+            "reina_talking.png"
+        attribute smiling:
+            "reina_smiling.png"
+        attribute shocked:
+            "reina_shocked.png"
         attribute laughing:
-            "reina_laughing"
+            "reina_laughing.png"
 
 layeredimage kuma1:
     #at sprite_highlight('kuma')
     group emotion:
         attribute neutral default:
-            "kuma_neutral"
-        attribute happy:
-            "kuma_happy"
+            "kuma_neutral.png"
         attribute talking:
-            "kuma_talking"
-        attribute confused:
-            "kuma_confused"
+            "kuma_talking.png"
+        attribute smiling:
+            "kuma_smiling.png"
+        attribute shocked:
+            "kuma_shocked.png"
         attribute laughing:
-            "kuma_laughing"
+            "kuma_laughing.png"
 
-layeredimage santa1:
+layeredimage santa:
+    at sprite_highlight("santa")
     group emotion:
         attribute neutral default:
-            "santa_neutral"
+            "santa_neutral.png"
         attribute shouting:
-            "santa_shouting"
+            "santa_shouting.png"
 
 image reina = LayeredImageProxy("reina1", transform=sprite_highlight("r"))
 image kuma = LayeredImageProxy("kuma1", transform=sprite_highlight("k"))
-image santa = LayeredImageProxy("santa1", transform=sprite_highlight("v"))
+#image santa = LayeredImageProxy("santa1", transform=sprite_highlight("v"))
 
 # defaults 
 default preferences.text_cps = 40
@@ -91,12 +93,16 @@ define config.nvl_list_length = None
 
 # transforms 
 transform right:
-    xalign 0.8
-    yalign 1.0
+    xalign 0.9
+    yalign 0.1
 
 transform left:
-    xalign 0.2
-    yalign 1.0
+    xalign 0.1
+    yalign 0.1
+
+transform center:
+    xalign 0.5
+    yalign 0.1
 
 # images
 image white = "#fff"
@@ -137,7 +143,8 @@ label start:
     r "Just gotta get it over here.."
 
     scene bg apartment with slow_dissolve
-    show reina neutral with dissolve
+    show reina neutral at center with dissolve:
+        zoom 0.2
     "I flick the mascara up a little more, making sure it curls up just the way I want it to."
     "Today’s the big day! {w}I’m gonna spend a nice Christmas date with my girlfriend."
     r "Hehe… Kuma is gonna love this one…"
