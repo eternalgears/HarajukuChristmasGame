@@ -1,7 +1,7 @@
 ﻿label visualkeisanta:
     # (visual kei santa part shows up when reina and kuma are done with going everywhere in harujuku)
 
-    show bg harajuku city:
+    show bg harajuku:
         zoom 0.375
 
     show reina neutral at right with easeinright:

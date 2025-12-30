@@ -3,7 +3,7 @@
 #when all image buttons are pressed, then proceed to the visual kei santa label (visualkeisanta)
 
 #after visual kei santa part, then go to apartment_end label
-    scene bg harajuku city with slow_dissolve:
+    scene bg harajuku with slow_dissolve:
         zoom 0.375
 
     default Parfait = False

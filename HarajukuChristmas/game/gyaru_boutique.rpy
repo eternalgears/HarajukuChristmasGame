@@ -73,7 +73,7 @@
     #flashback transition to high school
     play music "audio/shopping + flashbacks - final mix w_ loop.mp3" fadein 2.5
     scene white with slow_dissolve
-    scene bg bedroom dark with dissolve:
+    scene bg apartment with dissolve:
         zoom 0.375
 
     "After a long tiring day of school, I've finally made it home..."
@@ -121,7 +121,7 @@
 
     # change scene for photoshoot
     scene pink with slow_dissolve
-    scene bg harajuku city with slow_dissolve:
+    scene bg harajuku with slow_dissolve:
         zoom 0.375
 
     show reina smiling at right with easeinright:
@@ -140,7 +140,7 @@
 
     # transition? here
     scene pink with slow_dissolve
-    scene bg bedroom dark with slow_dissolve:
+    scene bg apartment with slow_dissolve:
         zoom 0.375
 
     show reina neutral at center with dissolve:
@@ -194,7 +194,7 @@
     "I don't want those rumors to mess up the bond that we have."
 
     scene pink with slow_dissolve
-    scene bg bedroom morning with slow_dissolve:
+    scene bg apartment with slow_dissolve:
         zoom 0.375
     
     show reina talking at center with dissolve:
@@ -227,7 +227,7 @@
 
     # transition AGAIN
     scene pink with slow_dissolve
-    scene bg bedroom dark with slow_dissolve:
+    scene bg apartment with slow_dissolve:
         zoom 0.375
     "A few months later..."
     
