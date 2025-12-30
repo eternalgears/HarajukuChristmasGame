@@ -59,7 +59,7 @@
     scene black with slow_dissolve
     "After we both got changed into our pajamas, we immediately went to cuddle in the kotatsu."
     window hide
-    scene cg apartmendend with slow_dissolve
+    scene cg apartmentend with slow_dissolve
     pause
     r "..."
     k "I know it’s hard to believe me right now."
