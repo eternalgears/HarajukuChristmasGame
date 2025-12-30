@@ -213,7 +213,10 @@ label start:
     r smiling "Ah!"
     # sound effect of hugging and cg should be here
 
+    window hide
     scene cg hug with slow_dissolve
+    pause
+    
     r "KUUUMMAAA!!!"
     k "Ghk…!"
 

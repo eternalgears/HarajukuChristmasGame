@@ -63,11 +63,10 @@
     # kuma smiling sprite
     k "Those colors kinda remind me of our outfits."
 
-    "{i}Step two: dip the gel wax in glitter and place them in the glass.{/i}"
-
     window hide
     scene cg parfaitcandles with slow_dissolve
     pause
+    "{i}Step two: dip the gel wax in glitter and place them in the glass.{/i}"
 
     show cg parfaitcandles with medium_dissolve:
         subpixel True anchor (0.7, 0.88) zoom 2.03
