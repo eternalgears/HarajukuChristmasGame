@@ -146,14 +146,13 @@ label splashscreen:
     scene white
     play sound "audio/splash.wav"
     scene bg splash with dissolve
-    with Pause(1)
-    $ renpy.pause()
+    with Pause(1.5)
 
     scene white with slow_dissolve
 
     show text "{size=40}{color=#CC5E5E}Made for the Winter Visual Novel Jam 2025.{/size}{/color}"
     with slow_dissolve
-    $ renpy.pause()
+    with Pause(1.5)
     hide text with dissolve
     with Pause(1)
 
