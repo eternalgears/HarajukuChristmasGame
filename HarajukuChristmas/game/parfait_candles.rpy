@@ -1,7 +1,7 @@
 ﻿label parfait_candles:
     scene bg parfaitcandles with slow_dissolve:
         zoom 0.375
-    play music "audio/parfaitcandles.mp3" fadein 0.5
+    play music "<volume 0.4>audio/parfaitcandles.mp3" fadein 0.5
     window hide
     $ renpy.pause(1.9)
     #making parfait candles has a cg and several transitions per "parfait making" steps
@@ -15,10 +15,10 @@
     k talking "Ooouh..."
     k smiling "Is this a dessert making place?"
     r smiling "Kind of!"
-    r "I saw this once in a M*i-m*me-M*itié video where Mana-sama and Aoki Mis*ko made parfait candles!"
+    r "I saw this once in a M*i-m*me-M*itié video where M*na-sama and Aoki Mis*ko made parfait candles!"
     k neutral "Huh? Whozzat again?"
     # reina thinking sprite
-    r talking "Mana-sama is that one pretty doll from M*lice M*zer...."
+    r talking "M*na-sama is that one pretty doll from the band M*lice M*zer...."
     k talking "The real beautiful one with the blue hair and curls?"
     r laughing "Yeah!"
     r smiling "And Aoki Mis*ko is a pretty popular lolita model! One of the most well known and influential lolita if you ask me."
@@ -189,10 +189,12 @@
     scene pink with slow_dissolve
     scene bg parfaitcandles with slow_dissolve:
         zoom 0.375
-    show reina neutral at right with sprite_dissolve:
+    show reina neutral at right:
         zoom 0.2
-    show kuma neutral at left with sprite_dissolve:
+    show kuma neutral at left:
         zoom 0.2
+    with sprite_dissolve
+
     r laughing "It’s done!!"
     "My parfait has pink liquid wax, with a purple scoop! There’s bows, hearts, and bells to show that it’s a one of a kind Christmas parfait."
     k smiling "Cute, cute as always Reina."
@@ -208,7 +210,7 @@
     # writers note: blind leading the blind
 
     k laughing "Thank ya, thank ya."
-    k talking "I was thinking about Mana-sama while making this. Y’know with the blue and purple."
+    k talking "I was thinking about M*na-sama while making this. Y’know with the blue and purple."
     r smiling "Huhu~"
     r talking "You got an eye for style..."
     "I snap some photos of our finished parfait candles. So cute!"
@@ -232,4 +234,8 @@
     r laughing "We could’ve shared!"
     k smiling "You have a point..."
 
+    hide reina
+    hide kuma
+    with sprite_dissolve
+    
     jump harajukuoptions

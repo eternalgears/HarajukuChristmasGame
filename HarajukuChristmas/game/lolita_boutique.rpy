@@ -9,7 +9,6 @@
     show kuma neutral at left:
         zoom 0.2
     with easeinleft
-    with Pause(1.0)
     r "EEEEKK!! This place is really packed!"
     k talking "Well ya know.. it is the holiday season..."
     r smiling"Hmm... well you know what this calls for?"
@@ -74,7 +73,7 @@
     r "This looks like enough..."
     "I scrolled through my gallery and carefully chose which photos to upload."
     "Finally, I set the post caption to ‘Pray for miniature moon ♡’"
-
+    scene pink with dissolve
 
 
     # Change to present

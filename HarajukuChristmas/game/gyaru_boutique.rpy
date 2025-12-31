@@ -4,7 +4,7 @@
     scene bg gyaru boutique with slow_dissolve:
         zoom 0.375
     play music "audio/gyaru boutique.mp3" fadein 2.5
-    play sound "audio/store_bell.wav"
+    play sound "<volume 0.4>audio/store_bell.wav"
 
     show reina smiling at center with dissolve:
         zoom 0.2
@@ -282,9 +282,10 @@
     "She seems serious."
 
     #in Text
-    show reina neutral at right with easeinright
+    show reina shocked at right with easeinright
 
     r_nvl "Yeah sure!"
+    show reina neutral
     k_nvl "actually"
     k_nvl "are you free to call?"
     r_nvl talking "Yeah!"

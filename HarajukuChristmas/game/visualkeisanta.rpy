@@ -64,11 +64,12 @@
     show reina shocked
     show kuma shocked
     show santa shouting
-    v "MINNESANN {w}KONNICHI WAAARRRTS" with hpunch
+    v "MINNASANN" with hpunch
+    v "KONNICHI WAAARRRTS"
     v "YYYUUUUWAARTS" with hpunch
     v "HAJIMETE" with hpunch
     v "HA{w}JI{w}METEE" with hpunch
-    v neutral "Seven Eleven." with slow_dissolve
+    v neutral "Seven El*ven." with slow_dissolve
     v shouting "DE{w}DE{w}DE{w} ONIGIRI" with hpunch
     v "KAI MASTER"
     v "JA{w}JA{w}JA{w}JA{w}JA{w}JA{w}JA{w}JA" with hpunch
