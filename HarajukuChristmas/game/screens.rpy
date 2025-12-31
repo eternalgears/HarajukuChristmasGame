@@ -616,6 +616,7 @@ screen save():
     tag menu
 
     use file_slots(_("Save"))
+    on "show" action Function(voice_play)
 
 
 screen load():
@@ -623,6 +624,7 @@ screen load():
     tag menu
 
     use file_slots(_("Load"))
+    on "show" action Function(voice_play)
 
 
 screen file_slots(title):
@@ -759,6 +761,7 @@ style slot_button_text:
 screen preferences():
 
     tag menu
+    on "show" action Function(voice_play)
 
     use game_menu(_("Preferences"), scroll="viewport"):
 

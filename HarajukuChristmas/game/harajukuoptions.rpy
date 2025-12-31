@@ -29,7 +29,10 @@
                 activate_sound "audio/kuma.wav"
                 idle "Parfait_Candles_Idle.png"
                 hover "Parfait_Candles_Hover.png"
-                action Jump("parfait_candles")
+                action [Hide("displayTextScreen"), Jump("parfait_candles")]
+                                
+                hovered Show("displayTextScreen", displayText = "Parfait Candle Shop", xval = 0.04, yval = 0.5)
+                unhovered Hide("displayTextScreen")
         if not Lolita:
             imagebutton:
                 xpos 0.3585
@@ -40,7 +43,11 @@
                 activate_sound "audio/kuma.wav"
                 idle "Lolita_Boutique_Idle.png"
                 hover "Lolita_Boutique_Hover.png"
-                action Jump("lolita_boutique")
+                action [Hide("displayTextScreen"), Jump("lolita_boutique")]
+                
+                hovered Show("displayTextScreen", displayText = "Lolita Boutique", xval = 0.35, yval = 0.6)
+                unhovered Hide("displayTextScreen")
+
         if not Gyaru:
             imagebutton:
                 xpos 0.815
@@ -51,5 +58,15 @@
                 activate_sound "audio/kuma.wav"
                 idle "Gyaru_Boutique_Idle.png"
                 hover "Gyaru_Boutique_Hover.png"
-                action Jump("gyaru_boutique")
+                action [Hide("displayTextScreen"), Jump("gyaru_boutique")]
 
+                hovered Show("displayTextScreen", displayText = "Gyaru Boutique", xval = 0.85, yval = 0.70)
+                unhovered Hide("displayTextScreen")
+    screen displayTextScreen(displayText, xval, yval):
+        vbox:
+            xalign xval
+            yalign yval
+            frame:
+                padding (10, 10, 10, 10)
+                background Frame(Solid("#ffffff"))
+                text displayText color "#ab5c5c"

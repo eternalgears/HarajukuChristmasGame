@@ -2,32 +2,50 @@
 
 # voice bleeps
 init python:
+    # voice bleep audio channel
+    renpy.music.register_channel("bleeps", mixer= "sfx", loop=True)
+
+    # function for playing voice bleeps          
+    def voice_play(on=False, char=1):
+        if on:
+            if char==1:
+                renpy.sound.play("audio/reina.wav", channel="bleeps", loop=True)
+            if char==2:
+                renpy.sound.play("audio/kuma.wav", channel="bleeps", loop=True)
+            if char==3:
+                renpy.sound.play("audio/santa.wav", channel="bleeps", loop=True)
+        else:
+            renpy.sound.stop(channel="bleeps")
+
     def reina_sound(event, interact=True, **kwargs):
         if not interact:
             return
 
-        if event == "show":
-            renpy.sound.play("audio/reina.wav", loop=True)
+        if event == "show" or event == "begin":
+            #renpy.sound.play("audio/reina.wav", loop=True)
+            voice_play(True, 1)
         elif event == "slow_done" or event == "end":
-            renpy.sound.stop()
+            voice_play(False, 1)
 
     def kuma_sound(event, interact=True, **kwargs):
         if not interact:
             return
 
         if event == "show":
-            renpy.sound.play("audio/kuma.wav", loop=True)
+            #renpy.sound.play("audio/kuma.wav", loop=True)
+            voice_play(True, 2)
         elif event == "slow_done" or event == "end":
-            renpy.sound.stop()
+            voice_play(False, 2)
 
     def santa_sound(event, interact=True, **kwargs):
         if not interact:
             return
 
         if event == "show":
-            renpy.sound.play("audio/santa.wav", loop=True)
+            #renpy.sound.play("audio/santa.wav", loop=True)
+            voice_play(True, 3)
         elif event == "slow_done" or event == "end":
-            renpy.sound.stop()
+            voice_play(False, 3)
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
