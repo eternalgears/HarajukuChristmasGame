@@ -172,6 +172,7 @@ label start:
         zoom 0.2
     $ persistent.endingOne = False
     "I flick the mascara up a little more, making sure it curls up just the way I want it to."
+    show reina smiling
     "Today’s the big day! {w}I’m gonna spend a nice Christmas date with my girlfriend."
 
     r talking "Hehe… Kuma is gonna love this one…"
@@ -219,7 +220,7 @@ label start:
     # photo snapping sound effects
     play sound "<volume 4.0>audio/photo.wav"
     "(snaps some photos)"
-    r neutral "Let’s go!"
+    r laughing "Let’s go!"
 
     #replace the line below with harajuku music later
     scene bg harajuku with slow_dissolve:
@@ -284,5 +285,7 @@ label start:
 
     hide reina with dissolve
     hide kuma with dissolve
+
+    "(Pick a shop to go to for your Christmas date!)"
 
     jump harajukuoptions

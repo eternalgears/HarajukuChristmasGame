@@ -382,7 +382,7 @@ screen main_menu():
 
     add gui.main_menu_background
     if persistent.endingOne:
-        add "images/cg apartmentend.png"
+        add "gui/end_menu.png"
     ## This empty frame darkens the main menu.
     frame:
         style "main_menu_frame"
