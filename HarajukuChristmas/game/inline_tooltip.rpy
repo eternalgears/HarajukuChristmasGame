@@ -3,7 +3,7 @@
 # And Element 4 is the description string to display
 define inline_tooltip_list = [
     inline_tooltip_data("kinsta", [_("Kinsta")], _("Kinstagram"), _("A popular social media app that lets you post images and connect with people.")),
-    inline_tooltip_data("harajuku", [_("Harajuku")], _("Harajuku, Tokyo"), _("A vibrant city in Tokyo known for its inhabitants' unique fashion.")),
+    inline_tooltip_data("harajuku", [_("Harajuku")], _("Harajuku"), _("A vibrant part of Shinjuku, Tokyo known for its inhabitants' unique fashion.")),
     inline_tooltip_data("gyaru", [_("gyaru")], _("Gyaru"), _("Derived from the English word \"gal,\" this subculture/Japanese fashion style is known for its Westernized and flashy look!")),
     inline_tooltip_data("coord", [_("coord")], _("Coordinate"), _("A complete outfit with all the Japanese fashion style's components. People that wear Lolita fashion, Gyaru, Visual-kei, etc. typically have coordinates.")),
     inline_tooltip_data("jsk", [_("JSK"), _("jumperskirts"), ("jumperskirt")], _("Jumperskirt"), _("A sleeveless dress with straps, usually in lolita fashion coordinates.")),
